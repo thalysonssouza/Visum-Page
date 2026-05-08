@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visum | CMS Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cms-bg" data-theme="visum">
+
+    <div class="cms-login-container">
+        <div class="cms-login-box">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <img src="assets/logo-visum.svg" alt="Visum" style="height: 24px;">
+                <h3 style="margin-top: 1rem; font-weight: 400;">Workspace Admin</h3>
+            </div>
+            
+            <form action="cms-dashboard.html" method="GET">
+                <label class="cms-label">E-mail corporativo</label>
+                <input type="email" class="cms-input" placeholder="seu.nome@visumhub.com.br" required>
+                
+                <label class="cms-label">Senha</label>
+                <input type="password" class="cms-input" placeholder="••••••••" required>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Acessar Painel</button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="index.html" style="font-size: 0.85rem; color: var(--text-muted); text-decoration: none;">← Voltar ao site principal</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

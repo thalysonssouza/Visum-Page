@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visum Hub | Inteligência para Operações Multiloja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-theme="visum">
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <canvas id="particles-bg"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo" id="site-logo">
+                <img src="assets/logo-visum.svg" alt="Visum">
+            </a>
+            <nav class="nav-links">
+                <div class="nav-has-dropdown">
+                    <button class="nav-dropdown-trigger">
+                        Produto
+                        <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="nav-mega-panel">
+                        <div class="mega-left">
+                            <div class="mega-section-label">Produto</div>
+                            <a href="produto-chat.html" class="mega-item">
+                                <div class="mega-item-icon"><svg width="16" height="16" fill="none"
+                                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg></div>
+                                <div class="mega-item-body">
+                                    <div class="mega-item-title">Chat Visum</div>
+                                    <div class="mega-item-desc">Converse com seus dados operacionais</div>
+                                </div>
+                            </a>
+                            <a href="produto-insightsealertas.html" class="mega-item">
+                                <div class="mega-item-icon"><svg width="16" height="16" fill="none"
+                                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                    </svg></div>
+                                <div class="mega-item-body">
+                                    <div class="mega-item-title">Insights e Alertas</div>
+                                    <div class="mega-item-desc">Padrões ocultos detectados pela IA</div>
+                                </div>
+                            </a>
+                            <a href="produto-tarefas.html" class="mega-item">
+                                <div class="mega-item-icon"><svg width="16" height="16" fill="none"
+                                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M9 11l3 3L22 4"></path>
+                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                    </svg></div>
+                                <div class="mega-item-body">
+                                    <div class="mega-item-title">Tarefas e Checklist</div>
+                                    <div class="mega-item-desc">Transforme insights em ação real</div>
+                                </div>
+                            </a>
+                            <a href="produto-paineis.html" class="mega-item">
+                                <div class="mega-item-icon"><svg width="16" height="16" fill="none"
+                                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <rect x="3" y="3" width="7" height="7"></rect>
+                                        <rect x="14" y="3" width="7" height="7"></rect>
+                                        <rect x="14" y="14" width="7" height="7"></rect>
+                                        <rect x="3" y="14" width="7" height="7"></rect>
+                                    </svg></div>
+                                <div class="mega-item-body">
+                                    <div class="mega-item-title">Painéis de Análise</div>
+                                    <div class="mega-item-desc">Visualize o que importa, em tempo real</div>
+                                </div>
+                            </a>
+                            <a href="produto-integracoes.html" class="mega-item">
+                                <div class="mega-item-icon"><svg width="16" height="16" fill="none"
+                                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                    </svg></div>
+                                <div class="mega-item-body">
+                                    <div class="mega-item-title">Integrações</div>
+                                    <div class="mega-item-desc">Conecte PDV, delivery e ERPs</div>
+                                </div>
+                            </a>
+                            <a href="produto-gestao.html" class="mega-item">
+                                <div class="mega-item-icon"><svg width="16" height="16" fill="none"
+                                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg></div>
+                                <div class="mega-item-body">
+                                    <div class="mega-item-title">Gestão e Governança</div>
+                                    <div class="mega-item-desc">Controle multiloja com padronização</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mega-right">
+                            <div class="mega-right-label">Visum Hub</div>
+                            <div class="mega-right-title">O centro de controle da sua operação</div>
+                            <div class="mega-right-desc">Tudo que você precisa para decidir rápido e operar bem.</div>
+                            <a href="index.html" class="mega-right-btn">Ver produto →</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="planos.html">Planos</a>
+                <a href="cases.html">Cases</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://www.visumhub.com.br/auth/login" style="font-weight: 500;">Login</a>
+                <a href="comecar.html" class="btn btn-primary">Começar agora</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="main-content">
+        <!-- HERO -->
+        <section class="hero container">
+            <canvas id="bg-canvas"></canvas>
+            <h1 id="hero-title-node" class="hero-title"></h1>
+            <p id="hero-p" style="opacity: 0;">Centralize seus dados, entenda sua operação e transforme insights em ação
+                com IA. O copiloto inteligente da sua operação.</p>
+
+            <div class="hero-actions" id="hero-btns" style="opacity: 0;">
+                <a href="#" class="btn btn-primary">Ver demo</a>
+                <a href="comecar.html" class="btn btn-outline">Começar agora</a>
+            </div>
+
+            <div class="hero-microcopy" id="hero-micro" style="opacity: 0;">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                Aumente margem, reduza perdas e tenha controle total da operação
+            </div>
+        </section>
+
+        <!-- SCROLL REVEAL CHAT PREVIEW -->
+        <section id="chat-reveal-section" class="chat-reveal-section">
+            <div class="chat-reveal-sticky">
+                <div class="chat-reveal-image-container" id="chatRevealContainer">
+                    <img src="assets/image-full-visum-2.jpeg" alt="Gestor analisando dados" class="chat-reveal-image"
+                        id="chatRevealImage">
+
+                    <div class="floating-cards-container" id="floatingCardsContainer">
+                        <div class="visum-chat-card card-1">
+                            <div class="visum-chat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B2EFF"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p>Quais pratos estão puxando meu CMV para cima?</p>
+                        </div>
+
+                        <div class="visum-chat-card card-2">
+                            <div class="visum-chat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B2EFF"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p>Por que minha avaliação caiu no iFood?</p>
+                        </div>
+
+                        <div class="visum-chat-card card-3">
+                            <div class="visum-chat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B2EFF"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p>Qual meu faturamento da semana?</p>
+                        </div>
+
+                        <div class="visum-chat-card card-4">
+                            <div class="visum-chat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B2EFF"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p>Como está a execução operacional do meu restaurante neste momento?</p>
+                        </div>
+
+                        <div class="visum-chat-card card-5">
+                            <div class="visum-chat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B2EFF"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p>Quantos pedidos estão em produção agora no delivery?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O QUE A VISUM FAZ POR VOCÊ -->
+        <section class="container">
+            <div class="section-title">
+                <h2 class="text-gradient">Do dado à decisão</h2>
+                <p>O que a Visum faz pela sua operação todos os dias, de forma automatizada.</p>
+            </div>
+
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon"><img src="assets/integration.png" alt="Integração"></div>
+                    <h3>Integração</h3>
+                    <p>Conectamos PDV, delivery, avaliações e ERP em uma única base confiável, eliminando retrabalho e
+                        centralizando a operação.</p>
+                    <a href="produto-integracoes.html" class="btn btn-outline">Conhecer</a>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon"><img src="assets/insight.png" alt="Insight"></div>
+                    <h3>Inteligência</h3>
+                    <p>A IA cruza dados e detecta padrões ocultos para sugerir estratégias de precificação, compras e
+                        promoções no momento exato.</p>
+                    <a href="produto-insightsealertas.html" class="btn btn-outline">Conhecer</a>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon"><img src="assets/action.png" alt="Ação"></div>
+                    <h3>Ação</h3>
+                    <p>Cada insight se transforma em ação prática com tarefas e checklists que garantem execução e
+                        controle
+                        da operação no dia a dia.</p>
+                    <a href="produto-tarefas.html" class="btn btn-outline">Conhecer</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- BLOCO VISUAL ROXO -->
+        <section class="container">
+            <div class="highlight-box">
+                <h2>Um hub de inteligência que aprende com sua operação e evolui com você</h2>
+                <div style="margin-top: 2.5rem;">
+                    <a href="comecar.html" class="btn btn-neutral">Começar agora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTELIGÊNCIA EM 3 ETAPAS -->
+        <section class="container">
+            <div class="section-title">
+                <h2>Não é só análise. <br> <span class="text-gradient">É execução.</span></h2>
+                <p>Um fluxo claro para levar sua rede ao máximo de eficiência operacional.</p>
+            </div>
+
+            <div class="steps-wrapper">
+                <div class="step-item">
+                    <div class="step-content">
+                        <span class="step-number">01</span>
+                        <h3>Integrar dados</h3>
+                        <p>Você não perde mais tempo abrindo dezenas de abas. Sincronizamos tudo: Vendas, Delivery,
+                            Avaliações e execução operacional em um fluxo contínuo com total visibilidade.</p>
+                    </div>
+                    <div class="step-visual" style="box-shadow: none;">
+                        <video src="assets/Animation_typing_code.mp4" muted loop playsinline
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;"></video>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-content">
+                        <span class="step-number">02</span>
+                        <h3>Gerar insights e alertas</h3>
+                        <p>A inteligência analisa o cruzamento de suas vendas por canal versus insumos, indicando onde
+                            você
+                            está deixando dinheiro na mesa.</p>
+                    </div>
+                    <div class="step-visual" style="box-shadow: none;">
+                        <video src="assets/alert-movie-video.mp4" muted loop playsinline
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;"></video>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-content">
+                        <span class="step-number">03</span>
+                        <h3>Executar tarefas e Checklists</h3>
+                        <p>Identificou o problema? Bastam alguns cliques para enviar tarefas aos seus operadores de loja
+                            e
+                            transformar os seus dados em realidade financeira.</p>
+                    </div>
+                    <div class="step-visual" style="box-shadow: none;">
+                        <video src="assets/Create_animation_in.mp4" muted loop playsinline
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARA QUEM É -->
+        <section class="container"
+            style="background: var(--bg-color); padding: 8rem 2rem; border-radius: var(--radius-lg); margin: 16rem auto;">
+            <div class="section-title" style="margin-bottom: 3rem;">
+                <h2>Criado para <br> <span class="text-gradient">quem faz acontecer</span></h2>
+            </div>
+
+            <div class="who-grid">
+                <div class="who-card">
+                    <img src="assets/Donos-de-restaurante.png" alt="Donos de restaurante">
+                    <div class="who-card-body">
+                        <span class="tag">Donos de restaurante</span>
+                        <h3>Tranquilidade e controle</h3>
+                    </div>
+                </div>
+
+                <div class="who-card">
+                    <img src="assets/gestores-operacionais.png" alt="Gestores operacionais">
+                    <div class="who-card-body">
+                        <span class="tag">Gestores operacionais</span>
+                        <h3>Eficiência de equipe</h3>
+                    </div>
+                </div>
+
+                <div class="who-card">
+                    <img src="assets/redes-franquia.png" alt="Redes e Franquias">
+                    <div class="who-card-body">
+                        <span class="tag">Redes e Franquias</span>
+                        <h3>Padronização em escala</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DECISÕES EM MINUTOS GRID 6 -->
+        <section class="container">
+            <div class="section-title">
+                <h2>Por que <span class="text-gradient">escolher o Visum?</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h4 class="mb-2">Integração multicanal</h4>
+                    <p style="font-size: 0.9rem;">Conecte iFood, Rappi, PDVs e ERPs em uma única visão da operação.</p>
+                </div>
+                <div class="feature-box">
+                    <h4 class="mb-2">Dados confiáveis</h4>
+                    <p style="font-size: 0.9rem;">Elimine planilhas quebradas e erros manuais com uma base de dados
+                        consistente.</p>
+                </div>
+                <div class="feature-box">
+                    <h4 class="mb-2">IA aplicada</h4>
+                    <p style="font-size: 0.9rem;">Processamos a complexidade dos dados e entregamos decisões claras do
+                        que fazer.</p>
+                </div>
+                <div class="feature-box">
+                    <h4 class="mb-2">Gestão multiloja</h4>
+                    <p style="font-size: 0.9rem;">Da visão consolidada da rede ao detalhe de cada item vendido.</p>
+                </div>
+                <div class="feature-box">
+                    <h4 class="mb-2">Alertas inteligentes</h4>
+                    <p style="font-size: 0.9rem;">Se algo sair do padrão, o Visum te avisa — antes de virar prejuízo.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h4 class="mb-2">Insights preditivos</h4>
+                    <p style="font-size: 0.9rem;">Antecipe a demanda e planeje sua operação com mais precisão.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROVA SOCIAL GALERIA -->
+        <section class="testimonials-gallery" id="testimonials-section">
+            <div class="container">
+                <div class="testimonials-grid">
+
+                    <!-- DEPOIMENTO 1: PAULO BONIFÁCIO -->
+                    <div class="tweet-card">
+                        <div class="tweet-card-header">
+                            <img src="assets/paulo-cabana.png" alt="Paulo Bonifácio" class="tweet-avatar">
+                            <div class="tweet-user-info">
+                                <span class="tweet-name">Paulo Bonifácio</span>
+                                <span class="tweet-role">Fundador · Cabana Burger · 30 lojas</span>
+                            </div>
+                            <svg class="tweet-x-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </div>
+                        <p class="tweet-quote">"A gente sempre achou que conhecia o nosso negócio até ver o Visum em
+                            ação. Ficou claro onde a gente realmente ganhava e onde estava perdendo dinheiro.
+                            Conseguimos recuperar margem em escala."</p>
+                    </div>
+
+                    <!-- DEPOIMENTO 2: JÉSSICA PASSOS -->
+                    <div class="tweet-card">
+                        <div class="tweet-card-header">
+                            <img src="assets/jessica.png" alt="Jéssica Passos" class="tweet-avatar">
+                            <div class="tweet-user-info">
+                                <span class="tweet-name">Jéssica Passos</span>
+                                <span class="tweet-role">Diretora de Operações · Mahai</span>
+                            </div>
+                            <svg class="tweet-x-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </div>
+                        <p class="tweet-quote">"O que mais me chamou atenção foi transformar padrão em execução de
+                            verdade. Com o checklist do Visum conseguimos garantir consistência nas lojas — hoje não é
+                            mais sobre confiar, é sobre saber."</p>
+                    </div>
+
+                    <!-- DEPOIMENTO 3: AQUIZA SOUZA -->
+                    <div class="tweet-card">
+                        <div class="tweet-card-header">
+                            <img src="assets/aquiza.png" alt="Aquiza Souza" class="tweet-avatar">
+                            <div class="tweet-user-info">
+                                <span class="tweet-name">Aquiza Souza</span>
+                                <span class="tweet-role">Gerente de Delivery · Cabana Burger</span>
+                            </div>
+                            <svg class="tweet-x-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </div>
+                        <p class="tweet-quote">"Com os alertas e a visibilidade em tempo real, conseguimos agir na hora,
+                            corrigir desvios e recuperar vendas que antes se perdiam sem ninguém perceber."</p>
+                    </div>
+
+                    <!-- DEPOIMENTO 4: CARLA MENDES -->
+                    <div class="tweet-card">
+                        <div class="tweet-card-header">
+                            <img src="assets/carla-mendes.png" alt="Carla Mendes" class="tweet-avatar">
+                            <div class="tweet-user-info">
+                                <span class="tweet-name">Carla Mendes</span>
+                                <span class="tweet-role">Gerente de Operações · Burger King Manaus</span>
+                            </div>
+                            <svg class="tweet-x-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </div>
+                        <p class="tweet-quote">"Com o Visum, passamos a ter uma leitura objetiva da operação, entendendo
+                            quais unidades precisam de atenção e quais ações tomar — muito mais agilidade e segurança na
+                            gestão."</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PRICING REWORK (HOME PREVIEW) -->
+        <section class="container">
+            <div class="section-title">
+                <h2>Planos simples.<br>
+                    <span class="text-gradient">Valor desde o primeiro dia</span>
+                </h2>
+                <p>Todos os planos incluem acesso completo à inteligência do Visum.</p>
+            </div>
+
+            <div class="pricing-toggle">
+                <span style="font-weight: 600;">Mensal</span>
+                <div
+                    style="width: 50px; height: 26px; background: var(--primary-color); border-radius: 99px; position: relative; cursor: pointer;">
+                    <div
+                        style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; right: 3px; top: 3px;">
+                    </div>
+                </div>
+                <span style="color: var(--text-muted);">Anual (Desconto de 20%)</span>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="stores">1 a 3 lojas</div>
+                    </div>
+                    <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem;">R$ 297<span
+                            style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/mês por loja</span>
+                    </div>
+                    <a href="planos.html" class="btn btn-outline" style="width: 100%;">ver mais detalhes</a>
+                    <ul class="pricing-features">
+                        <li>Dashboards em tempo real</li>
+                        <li>Integração PDV + 1 Delivery</li>
+                        <li>Alertas básicos</li>
+                        <li>Suporte em horário comercial</li>
+                    </ul>
+                </div>
+
+                <!-- Growth (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Mais escolhido</div>
+                    <div class="pricing-header">
+                        <h3>Growth</h3>
+                        <div class="stores">4 a 10 lojas</div>
+                    </div>
+                    <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem;">R$ 497<span
+                            style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/mês por loja</span>
+                    </div>
+                    <a href="planos.html" class="btn btn-primary" style="width: 100%;">ver mais detalhes</a>
+                    <ul class="pricing-features">
+                        <li>Copiloto IA avançado</li>
+                        <li>Integrações Ilimitadas</li>
+                        <li>Análise de CMV e rupturas</li>
+                        <li>Comparativo automático de lojas</li>
+                        <li>Suporte prioritário 24/7</li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="stores">11 a 50 lojas</div>
+                    </div>
+                    <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem;">R$ 797<span
+                            style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/mês por loja</span>
+                    </div>
+                    <a href="planos.html" class="btn btn-outline" style="width: 100%;">ver mais detalhes</a>
+                    <ul class="pricing-features">
+                        <li>Tudo do Growth</li>
+                        <li>DRE em tempo real</li>
+                        <li>Previsão de demanda preditiva</li>
+                        <li>Acesso via API Direta</li>
+                        <li>Gerente de Sucesso Dedicado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="custom-ops">
+                <div>
+                    <h3>Mais de 50 lojas?</h3>
+                    <p style="color: rgba(255,255,255,0.8); margin: 0;">Para operações complexas que exigem inteligência
+                        sob
+                        medida e integrações legadas próprias.</p>
+                </div>
+                <a href="#" class="btn" style="background: white; color: var(--primary-dark); font-weight: 600;">Falar
+                    com
+                    nossos especialistas</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- CTA FINAL -->
+    <section class="cta-footer">
+        <div class="container">
+            <h2>Comece a tomar decisões <span class="text-gradient">melhores hoje</span></h2>
+            <div class="hero-actions">
+                <a href="#" class="btn btn-primary">Ver demo</a>
+                <a href="#" class="btn btn-outline">Começar agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARCEIROS -->
+    <section class="partners-section">
+        <div class="partners-header">
+            <p class="partners-label">Parceiros</p>
+        </div>
+        <div class="partners-track-wrapper">
+            <div class="partners-track" id="partnersTrack">
+                <div class="partners-set" id="partnersSet">
+                    <!-- Set 1 -->
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="10" width="20" height="20" rx="4" fill="#C0C0C0" />
+                            <text x="28" y="26" font-family="Inter, sans-serif" font-size="16" font-weight="700"
+                                fill="#C0C0C0">BrandOne</text>
+                        </svg>
+                    </div>
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="14" cy="20" r="12" fill="#C8C8C8" />
+                            <text x="32" y="26" font-family="Inter, sans-serif" font-size="16" font-weight="700"
+                                fill="#C8C8C8">NexaCorp</text>
+                        </svg>
+                    </div>
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="14,6 24,34 4,34" fill="#BEBEBE" />
+                            <text x="30" y="26" font-family="Inter, sans-serif" font-size="16" font-weight="700"
+                                fill="#BEBEBE">Trinatek</text>
+                        </svg>
+                    </div>
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="8" width="22" height="22" rx="11" fill="#C4C4C4" />
+                            <text x="30" y="26" font-family="Inter, sans-serif" font-size="16" font-weight="700"
+                                fill="#C4C4C4">Omnichannel</text>
+                        </svg>
+                    </div>
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 6 L24 20 L14 34 L4 20 Z" fill="#D0D0D0" />
+                            <text x="30" y="26" font-family="Inter, sans-serif" font-size="16" font-weight="700"
+                                fill="#D0D0D0">Fluxio</text>
+                        </svg>
+                    </div>
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="8" width="24" height="24" rx="3" fill="#C8C8C8" />
+                            <text x="32" y="26" font-family="Inter, sans-serif" font-size="16" font-weight="700"
+                                fill="#C8C8C8">DataVault</text>
+                        </svg>
+                    </div>
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="14" cy="20" rx="12" ry="8" fill="#C0C0C0" />
+                            <text x="30" y="26" font-family="Inter, sans-serif" font-size="16" font-weight="700"
+                                fill="#C0C0C0">Orbitech</text>
+                        </svg>
+                    </div>
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 20 Q14 6 24 20 Q14 34 4 20Z" fill="#CACACA" />
+                            <text x="30" y="26" font-family="Inter, sans-serif" font-size="16" font-weight="700"
+                                fill="#CACACA">WaveSoft</text>
+                        </svg>
+                    </div><!-- end .partners-set -->
+                </div>
+            </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-side">
+                    <img src="assets/logo-visum.svg" alt="Visum" class="footer-visum-logo">
+                    <h3><img src="assets/logo-trusted%202.svg" alt="Trusted"> Um produto Trusted</h3>
+                    <div class="newsletter-widget">
+                        <h4
+                            style="font-size: 0.85rem; font-weight: 400; color: var(--text-muted); margin-bottom: 0.75rem;">
+                            assine nossa newsletter</h4>
+                        <form class="newsletter-form"
+                            onsubmit="event.preventDefault(); var msg = this.querySelector('.newsletter-message'); msg.textContent = 'Inscrição confirmada com sucesso!'; msg.classList.add('success'); this.reset();">
+                            <div class="newsletter-input-group">
+                                <input type="email" placeholder="Seu melhor e-mail" required>
+                                <button type="submit" class="newsletter-btn" aria-label="Assinar">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 2L11 13"></path>
+                                        <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="newsletter-message"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-nav-col">
+                    <h4>Visum</h4>
+                    <ul>
+                        <li><a href="historia.html">Sobre</a></li>
+                        <li><a href="planos.html">Planos</a></li>
+                        <li><a href="cases.html">Cases</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-col">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="produto-chat.html">Chat Visum</a></li>
+                        <li><a href="produto-tarefas.html">Tarefas</a></li>
+                        <li><a href="produto-paineis.html">Painéis</a></li>
+                        <li><a href="produto-integracoes.html">Integrações</a></li>
+                        <li><a href="produto-gestao.html">Gestão</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-col">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="cases.html">Cases</a></li>
+                        <li><a href="https://parceiros.visumhub.ai/">Parceiros</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-display-name">
+                <div class="floating-ai-container">
+                    <img src="assets/IconAI-intelligentproduct.png" alt="AI" class="floating-ai-icon">
+                </div>
+                <h2 class="text-gradient">Copiloto Inteligente</h2>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-info">
+                    Visum 2026
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos</a>
+                    <a href="https://www.instagram.com/visumhubai" class="footer-social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/visum-hub-ai/" class="footer-social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect width="4" height="12" x="2" y="9" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="background.js"></script>
+    <script>
+        // Scroll-reveal chat box
+        (function () {
+            const container = document.getElementById('chatRevealContainer');
+            const section = document.getElementById('chat-reveal-section');
+            const cards = document.querySelectorAll('.visum-chat-card');
+            if (!container || !section) return;
+
+            function update() {
+                const rect = section.getBoundingClientRect();
+                const windowH = window.innerHeight;
+
+                // progress = 0 at top, 1 at bottom of sticky section
+                // rect.top is 0 when sticky starts, and goes negative up to -(rect.height - windowH)
+                const scrollableDistance = rect.height - windowH;
+                let rawProgress = -rect.top / scrollableDistance;
+                // Higher multiplier for even faster reveal (animation completes in <50% scroll)
+                const progress = Math.max(0, Math.min(1, rawProgress * 2.2));
+
+                // Image expands from 60% width / 60vh to 100% width / 100vh
+                const widthPercent = 60 + (progress * 40);
+                const heightVh = 60 + (progress * 40);
+                const borderRadius = 24 - (progress * 24);
+
+                container.style.width = `${widthPercent}%`;
+                container.style.height = `${heightVh}vh`;
+                container.style.borderRadius = `${borderRadius}px`;
+
+                // Fade in cards based on progress
+                cards.forEach((card, index) => {
+                    // Stagger the reveal of cards starting from the very beginning (0.0)
+                    const startProgress = 0.0 + (index * 0.1);
+                    const endProgress = startProgress + 0.15;
+
+                    if (progress >= startProgress) {
+                        const cardProgress = Math.min(1, (progress - startProgress) / (endProgress - startProgress));
+                        const translateY = 30 - (cardProgress * 30);
+                        card.style.opacity = cardProgress;
+                        card.style.transform = `translateY(${translateY}px)`;
+                    } else {
+                        card.style.opacity = 0;
+                        card.style.transform = `translateY(30px)`;
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', update, { passive: true });
+            update();
+        })();
+
+
+        // IntersectionObserver for step items animation
+        (function () {
+            const items = document.querySelectorAll('.step-item');
+            const observerOptions = {
+                threshold: 0.2
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+
+                        // Play videos within the element
+                        const video = entry.target.querySelector('video');
+                        if (video) {
+                            video.play().catch(e => console.log("Erro ao dar play automático: ", e));
+                        }
+
+                        // No need to unobserve if we want the animation to stick
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            items.forEach(item => observer.observe(item));
+        })();
+
+        // Testimonial Slider Navigation (kept as no-op — slider replaced with grid)
+        (function () {
+            // slider was replaced with .testimonials-grid — skip
+        })();
+
+        // INITIAL ENTRANCE ANIMATION (PARTICLES -> TYPEWRITER -> FADE)
+        (function () {
+            // 1. Particle System
+            const canvas = document.getElementById('particles-bg') || document.getElementById('bg-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 2 + 1;
+                    this.speedX = (Math.random() - 0.5) * 0.5;
+                    this.speedY = (Math.random() - 0.5) * 0.5;
+                    this.opacity = Math.random() * 0.5 + 0.2;
+                }
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    if (this.x > canvas.width) this.x = 0;
+                    if (this.x < 0) this.x = canvas.width;
+                    if (this.y > canvas.height) this.y = 0;
+                    if (this.y < 0) this.y = canvas.height;
+                }
+                draw() {
+                    ctx.fillStyle = `rgba(139, 92, 246, ${this.opacity})`; // primary-color
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < 60; i++) particles.push(new Particle());
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animateParticles);
+            }
+            animateParticles();
+
+            // 2. Sequencing
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+            const heroTitleNode = document.getElementById('hero-title-node');
+            const header = document.querySelector('header');
+
+            const fullText = "Decisões em minutos, não em meses";
+            let charIndex = 0;
+
+            function typeWriter() {
+                if (charIndex < fullText.length) {
+                    heroTitleNode.textContent += fullText.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeWriter, 28); // 100% mais lento que os outros itens (28ms)
+                } else {
+                    heroTitleNode.classList.remove('typing');
+                    heroTitleNode.classList.add('text-gradient'); // Aplica o gradiente agora
+
+                    // Finish entrance
+                    document.getElementById('hero-p').classList.add('fade-in-up');
+                    document.getElementById('hero-btns').classList.add('fade-in-up');
+                    document.getElementById('hero-micro').classList.add('fade-in-up');
+
+                    // Show Header & Logo Last
+                    setTimeout(() => {
+                        header.style.opacity = '1';
+                    }, 112);
+                }
+            }
+
+            // Start sequence
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                        mainContent.style.opacity = '1';
+                        heroTitleNode.classList.add('typing');
+                        typeWriter();
+                    }, 140);
+                }, 280); // 280ms de partículas (40% mais lento que os 200ms)
+            });
+        })();
+    </script>
+
+    <!-- PARTNERS MARQUEE ENGINE -->
+    <script>
+        (function () {
+            const set = document.getElementById('partnersSet');
+            const track = document.getElementById('partnersTrack');
+            if (!set || !track) return;
+
+            // Clone the set so we have two identical halves side by side
+            const clone = set.cloneNode(true);
+            clone.removeAttribute('id');
+            track.appendChild(clone);
+
+            // Speed: pixels per second (lower = slower)
+            const SPEED = 40;
+
+            let x = 0;
+            let setWidth = 0;
+            let lastTime = null;
+            let paused = false;
+
+            function measureSet() {
+                // Width of one set including its padding-right gap
+                setWidth = set.offsetWidth;
+            }
+
+            function tick(timestamp) {
+                if (!lastTime) lastTime = timestamp;
+                const delta = timestamp - lastTime;
+                lastTime = timestamp;
+
+                if (!paused) {
+                    x -= SPEED * (delta / 1000);
+                    // When we've scrolled exactly one set width, snap back to 0
+                    if (Math.abs(x) >= setWidth) {
+                        x += setWidth;
+                    }
+                    track.style.transform = `translateX(${x}px)`;
+                }
+
+                requestAnimationFrame(tick);
+            }
+
+            // Pause on hover
+            track.addEventListener('mouseenter', () => { paused = true; });
+            track.addEventListener('mouseleave', () => { paused = false; lastTime = null; });
+
+            window.addEventListener('load', function () {
+                measureSet();
+                requestAnimationFrame(tick);
+            });
+
+            window.addEventListener('resize', measureSet);
+        })();
+    </script>
+    <script src="mega-menu.js"></script>
+    <script src="chat-widget.js"></script>
+</body>
+
+</html>

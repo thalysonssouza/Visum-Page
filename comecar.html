@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Começar Agora | Visum SaaS</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Switzer font is loaded from assets -->
+    <style>
+        @font-face {
+            font-family: 'Switzer-Variable';
+            src: url('assets/Switzer-Variable.woff2') format('woff2-variations'),
+                 url('assets/Switzer-Variable.woff2') format('woff2');
+            font-weight: 100 900;
+            font-display: swap;
+            font-style: normal;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #fcfcfc;
+            font-family: 'Switzer-Variable', sans-serif;
+        }
+
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .onboarding-header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .onboarding-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+            padding: 2rem;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-content {
+            max-width: 600px;
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            animation: fadeIn 0.4s ease-out;
+            text-align: center;
+        }
+
+        .step-content.active {
+            display: flex;
+        }
+
+        .dynamic-title {
+            font-size: 3rem;
+            font-weight: 200; /* Extra Light for smoothness */
+            line-height: 1.1;
+            color: #111;
+            width: 100%;
+            margin: 0;
+            letter-spacing: -0.04em;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #7B2BFC 0%, #4F46E5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .instruction {
+            font-size: 1.1rem;
+            color: #777;
+            width: 100%;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .onboarding-input {
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #E5E7EB;
+            padding: 1rem 0;
+            font-size: 1.6rem;
+            font-weight: 200;
+            outline: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            color: #111;
+        }
+
+        .onboarding-input::placeholder {
+            color: #CCC;
+            opacity: 0.8;
+        }
+
+        .onboarding-input:focus {
+            border-color: #7B2BFC;
+            transform: scale(1.02);
+        }
+
+        .onboarding-btns {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Inherit site buttons */
+        .btn-next {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            font-weight: 400;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-size: 1rem;
+            border: none;
+            background-color: #7B2BFC;
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn-next:hover {
+            background-color: #6D28D9;
+            transform: translateY(-2px);
+        }
+
+        .btn-back {
+            background: rgba(0,0,0,0.03);
+            color: #475569;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: all 0.2s;
+        }
+
+        .btn-back:hover { 
+            color: #7B2BFC;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4F46E5, #7C3AED);
+            transition: width 0.3s ease;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <header class="onboarding-header">
+        <a href="index.html">
+            <img src="assets/logo-visum.svg" alt="Visum" style="height: 24px;">
+        </a>
+    </header>
+
+    <div class="onboarding-container">
+
+        <!-- Step 1 -->
+        <div class="step-content active" id="step-1">
+            <div class="dynamic-title">Vamos começar.</div>
+            <div class="instruction">Primeiro, como podemos te chamar?</div>
+            <input type="text" class="onboarding-input" placeholder="Seu nome completo" id="input-nome" autofocus>
+            <div class="onboarding-btns">
+                <button class="btn-next" onclick="nextStep(1)">Continuar</button>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-content" id="step-2">
+            <div class="dynamic-title" id="title-2"></div>
+            <div class="instruction">Qual o nome da sua empresa?</div>
+            <input type="text" class="onboarding-input" placeholder="Nome da empresa" id="input-empresa">
+            <div class="onboarding-btns">
+                <button class="btn-back" onclick="prevStep(2)">Voltar</button>
+                <button class="btn-next" onclick="nextStep(2)">Continuar</button>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-content" id="step-3">
+            <div class="dynamic-title" id="title-3"></div>
+            <div class="instruction">Qual cargo você ocupa?</div>
+            <input type="text" class="onboarding-input" placeholder="Ex: Gerente de Operações" id="input-cargo">
+            <div class="onboarding-btns">
+                <button class="btn-back" onclick="prevStep(3)">Voltar</button>
+                <button class="btn-next" onclick="nextStep(3)">Continuar</button>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-content" id="step-4">
+            <div class="dynamic-title" id="title-4"></div>
+            <div class="instruction">Qual o seu melhor e-mail?</div>
+            <input type="email" class="onboarding-input" placeholder="seuemail@empresa.com" id="input-email">
+            <div class="onboarding-btns">
+                <button class="btn-back" onclick="prevStep(4)">Voltar</button>
+                <button class="btn-next" onclick="nextStep(4)">Continuar</button>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step-content" id="step-5">
+            <div class="dynamic-title" id="title-5">Estamos quase lá.</div>
+            <div class="instruction">Seu Telefone ou WhatsApp</div>
+            <input type="tel" class="onboarding-input" placeholder="(00) 00000-0000" id="input-tel">
+            <div class="onboarding-btns">
+                <button class="btn-back" onclick="prevStep(5)">Voltar</button>
+                <button class="btn-next" onclick="nextStep(5)">Continuar</button>
+            </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step-content" id="step-6">
+            <div class="dynamic-title" id="title-6">Para finalizar.</div>
+            <div class="instruction">Por que o Visum? O que você busca resolver?</div>
+            <input type="text" class="onboarding-input" placeholder="Conte um pouco do seu desafio" id="input-motivo">
+            <div class="onboarding-btns">
+                <button class="btn-back" onclick="prevStep(6)">Voltar</button>
+                <button class="btn-next" onclick="nextStep(6)">Concluir e enviar</button>
+            </div>
+        </div>
+
+        <!-- Final -->
+        <div class="step-content" id="step-final">
+            <div class="dynamic-title" id="title-final"></div>
+            <div class="instruction">Tudo certo! Nossa equipe entrará em contato em breve.</div>
+            <div class="onboarding-btns">
+                <a href="index.html" class="btn-next">Voltar para a Home</a>
+                <a href="blog.html" class="btn-back">Conhecer nosso Blog</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="progress-bar" id="progress"></div>
+
+    <script>
+        // Particles Animation (Same as Home)
+        (function () {
+            const canvas = document.getElementById('bg-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 2 + 1;
+                    this.speedX = (Math.random() - 0.5) * 0.5;
+                    this.speedY = (Math.random() - 0.5) * 0.5;
+                    this.opacity = Math.random() * 0.5 + 0.2;
+                }
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    if (this.x > canvas.width) this.x = 0;
+                    if (this.x < 0) this.x = canvas.width;
+                    if (this.y > canvas.height) this.y = 0;
+                    if (this.y < 0) this.y = canvas.height;
+                }
+                draw() {
+                    ctx.fillStyle = `rgba(139, 92, 246, ${this.opacity})`;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+            for (let i = 0; i < 60; i++) particles.push(new Particle());
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => { p.update(); p.draw(); });
+                requestAnimationFrame(animate);
+            }
+            animate();
+        })();
+
+        // Form Logic
+        let currentStep = 1;
+        const totalSteps = 6;
+        const progressElement = document.getElementById('progress');
+
+        const formData = { nome: '', empresa: '', cargo: '', email: '', tel: '', motivo: '' };
+
+        function updateTitle() {
+            if (currentStep === 2) document.getElementById('title-2').innerHTML = `Olá, <strong>${formData.nome}</strong>.`;
+            if (currentStep === 3) document.getElementById('title-3').innerHTML = `E seu cargo na <strong>${formData.empresa}</strong>?`;
+            if (currentStep === 4) document.getElementById('title-4').innerHTML = `Perfeito, <strong>${formData.nome}</strong>.`;
+            if (currentStep === 7) document.getElementById('title-final').innerHTML = `bem vindo ao <span class="text-gradient">Visum</span>, <span class="text-gradient">${formData.nome}</span>.`;
+        }
+
+        function updateProgress() {
+            const perc = (currentStep / (totalSteps + 1)) * 100;
+            progressElement.style.width = `${perc}%`;
+        }
+
+        function nextStep(step) {
+            const input = document.querySelector(`#step-${step} input`);
+            if (input && !input.value) {
+                input.style.borderColor = 'red';
+                return;
+            }
+            
+            // Save data
+            if (step === 1) formData.nome = input.value;
+            if (step === 2) formData.empresa = input.value;
+            if (step === 3) formData.cargo = input.value;
+            if (step === 4) formData.email = input.value;
+            if (step === 5) formData.tel = input.value;
+            if (step === 6) formData.motivo = input.value;
+
+            document.getElementById(`step-${step}`).classList.remove('active');
+            currentStep++;
+            
+            const nextElem = document.getElementById(currentStep <= totalSteps ? `step-${currentStep}` : 'step-final');
+            nextElem.classList.add('active');
+            if (currentStep <= totalSteps) nextElem.querySelector('input').focus();
+            
+            updateTitle();
+            updateProgress();
+        }
+
+        function prevStep(step) {
+            document.getElementById(`step-${step}`).classList.remove('active');
+            currentStep--;
+            const prevElem = document.getElementById(`step-${currentStep}`);
+            prevElem.classList.add('active');
+            prevElem.querySelector('input').focus();
+            updateTitle();
+            updateProgress();
+        }
+
+        // Enter key support
+        document.querySelectorAll('.onboarding-input').forEach(input => {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const step = parseInt(input.closest('.step-content').id.split('-')[1]);
+                    nextStep(step);
+                }
+            });
+        });
+    </script>
+    <script src="chat-widget.js"></script>
+</body>
+
+</html>

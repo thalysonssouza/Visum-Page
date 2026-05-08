@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visum | CMS Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cms-bg" data-theme="visum">
+
+    <div class="cms-layout">
+        <!-- Sidebar -->
+        <aside class="cms-sidebar">
+            <div style="margin-bottom: 3rem;">
+                <img src="assets/logo-visum.svg" alt="Visum" style="height: 20px;">
+            </div>
+            
+            <nav style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+                <a href="#" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); font-size: 0.9rem; color: var(--text-muted); text-decoration: none;">Visão Geral</a>
+                <a href="#" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); font-size: 0.9rem; background: var(--primary-bg); color: var(--primary-dark); font-weight: 500; text-decoration: none;">Posts do Blog</a>
+                <a href="#" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); font-size: 0.9rem; color: var(--text-muted); text-decoration: none;">Cases de Sucesso</a>
+                <a href="#" style="padding: 0.75rem 1rem; border-radius: var(--radius-md); font-size: 0.9rem; color: var(--text-muted); text-decoration: none;">Configurações</a>
+            </nav>
+
+            <div style="margin-top: auto; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--border-color);"></div>
+                    <div style="font-size: 0.85rem;">
+                        <div style="color: var(--text-main); font-weight: 500;">Admin Visum</div>
+                        <a href="cms-login.html" style="color: var(--text-muted); text-decoration: none;">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="cms-content">
+            <div class="cms-topbar">
+                <div>
+                    <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 0.25rem;">Posts do Blog</h2>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Gerencie o conteúdo editorial da Visum.</p>
+                </div>
+                <button class="btn btn-primary">+ Novo Post</button>
+            </div>
+
+            <div class="cms-list">
+                <div class="cms-list-header">
+                    <div>Título</div>
+                    <div>Categoria</div>
+                    <div>Data</div>
+                    <div>Ações</div>
+                </div>
+
+                <div class="cms-list-row">
+                    <div style="font-weight: 500; color: var(--text-main);">Por que a integração de dados falhou na maioria das redes</div>
+                    <div style="color: var(--text-muted);">Produto</div>
+                    <div style="color: var(--text-muted);">12 Mar 2026</div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button style="border:none; background:none; color: var(--primary-color); cursor:pointer;">Editar</button>
+                        <button style="border:none; background:none; color: #DC2626; cursor:pointer;">Excluir</button>
+                    </div>
+                </div>
+                
+                <div class="cms-list-row">
+                    <div style="font-weight: 500; color: var(--text-main);">O fim da latência no Delivery: Arquitetura de tempo real</div>
+                    <div style="color: var(--text-muted);">Engenharia</div>
+                    <div style="color: var(--text-muted);">05 Mar 2026</div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button style="border:none; background:none; color: var(--primary-color); cursor:pointer;">Editar</button>
+                        <button style="border:none; background:none; color: #DC2626; cursor:pointer;">Excluir</button>
+                    </div>
+                </div>
+
+                <div class="cms-list-row">
+                    <div style="font-weight: 500; color: var(--text-main);">Margem oculta: Como nossa IA detectou R$ 40k de perdas</div>
+                    <div style="color: var(--text-muted);">Operações</div>
+                    <div style="color: var(--text-muted);">28 Fev 2026</div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button style="border:none; background:none; color: var(--primary-color); cursor:pointer;">Editar</button>
+                        <button style="border:none; background:none; color: #DC2626; cursor:pointer;">Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
