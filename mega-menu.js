@@ -58,3 +58,28 @@
   document.querySelectorAll('.how-acc-item:first-child').forEach(function (i) { i.classList.add('open'); });
   document.querySelectorAll('.faq-item:first-child').forEach(function (i) { i.classList.add('open'); });
 })();
+
+// ==========================================
+// MOBILE HAMBURGER MENU
+// ==========================================
+(function () {
+  var btn = document.querySelector('.nav-hamburger');
+  var drawer = document.querySelector('.nav-mobile-drawer');
+  if (!btn || !drawer) return;
+
+  btn.addEventListener('click', function () {
+    var isOpen = btn.classList.toggle('open');
+    drawer.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Close drawer when a link inside is clicked
+  drawer.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      btn.classList.remove('open');
+      drawer.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+

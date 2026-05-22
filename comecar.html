@@ -36,9 +36,10 @@
         }
 
         .onboarding-header {
-            padding: 1.5rem 2rem;
+            padding: 1.5rem 3rem;
             display: flex;
-            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -182,16 +183,38 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .progress-bar {
-            position: fixed;
+        .progress-container {
+            position: absolute;
             bottom: 0;
             left: 0;
-            height: 4px;
+            width: 100%;
+            height: 3px;
+            background: rgba(0,0,0,0.05);
+        }
+
+        .progress-bar {
+            position: relative;
+            height: 100%;
             background: linear-gradient(90deg, #4F46E5, #7C3AED);
+            width: 0%;
             transition: width 0.3s ease;
-            z-index: 10;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(50%, -50%);
+            width: 12px;
+            height: 12px;
+            background: white;
+            border: 2px solid #7C3AED;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
         }
     </style>
+  <link rel="icon" type="image/svg+xml" href="Favicon 1.0.svg">
 </head>
 
 <body>
@@ -201,58 +224,67 @@
         <a href="index.html">
             <img src="assets/logo-visum.svg" alt="Visum" style="height: 24px;">
         </a>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress"></div>
+        </div>
     </header>
 
     <div class="onboarding-container">
 
-        <!-- Step 1 -->
+        <!-- Step 1 (Email) -->
         <div class="step-content active" id="step-1">
             <div class="dynamic-title">Vamos começar.</div>
-            <div class="instruction">Primeiro, como podemos te chamar?</div>
-            <input type="text" class="onboarding-input" placeholder="Seu nome completo" id="input-nome" autofocus>
+            <div class="instruction">Primeiro, qual o seu melhor e-mail?</div>
+            <input type="email" class="onboarding-input" placeholder="seuemail@empresa.com" id="input-email" autofocus>
             <div class="onboarding-btns">
                 <button class="btn-next" onclick="nextStep(1)">Continuar</button>
             </div>
         </div>
 
-        <!-- Step 2 -->
+        <!-- Step 2 (Nome) -->
         <div class="step-content" id="step-2">
             <div class="dynamic-title" id="title-2"></div>
-            <div class="instruction">Qual o nome da sua empresa?</div>
-            <input type="text" class="onboarding-input" placeholder="Nome da empresa" id="input-empresa">
+            <div class="instruction">Como podemos te chamar?</div>
+            <input type="text" class="onboarding-input" placeholder="Seu nome completo" id="input-nome">
             <div class="onboarding-btns">
                 <button class="btn-back" onclick="prevStep(2)">Voltar</button>
                 <button class="btn-next" onclick="nextStep(2)">Continuar</button>
             </div>
         </div>
 
-        <!-- Step 3 -->
+        <!-- Step 3 (Empresa) -->
         <div class="step-content" id="step-3">
             <div class="dynamic-title" id="title-3"></div>
-            <div class="instruction">Qual cargo você ocupa?</div>
-            <input type="text" class="onboarding-input" placeholder="Ex: Gerente de Operações" id="input-cargo">
+            <div class="instruction">Qual o nome da sua empresa?</div>
+            <input type="text" class="onboarding-input" placeholder="Nome da empresa" id="input-empresa">
             <div class="onboarding-btns">
                 <button class="btn-back" onclick="prevStep(3)">Voltar</button>
                 <button class="btn-next" onclick="nextStep(3)">Continuar</button>
             </div>
         </div>
 
-        <!-- Step 4 -->
+        <!-- Step 4 (Lojas) -->
         <div class="step-content" id="step-4">
             <div class="dynamic-title" id="title-4"></div>
-            <div class="instruction">Qual o seu melhor e-mail?</div>
-            <input type="email" class="onboarding-input" placeholder="seuemail@empresa.com" id="input-email">
+            <div class="instruction">Quantas lojas vocês possuem atualmente?</div>
+            <select class="onboarding-input" id="input-lojas" style="appearance: none; cursor: pointer; text-align-last: center;">
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="1 a 5">1 a 5</option>
+                <option value="6 a 10">6 a 10</option>
+                <option value="11 a 30">11 a 30</option>
+                <option value="50+">50+</option>
+            </select>
             <div class="onboarding-btns">
                 <button class="btn-back" onclick="prevStep(4)">Voltar</button>
                 <button class="btn-next" onclick="nextStep(4)">Continuar</button>
             </div>
         </div>
 
-        <!-- Step 5 -->
+        <!-- Step 5 (Cargo) -->
         <div class="step-content" id="step-5">
-            <div class="dynamic-title" id="title-5">Estamos quase lá.</div>
-            <div class="instruction">Seu Telefone ou WhatsApp</div>
-            <input type="tel" class="onboarding-input" placeholder="(00) 00000-0000" id="input-tel">
+            <div class="dynamic-title" id="title-5"></div>
+            <div class="instruction">Qual cargo você ocupa?</div>
+            <input type="text" class="onboarding-input" placeholder="Ex: Gerente de Operações" id="input-cargo">
             <div class="onboarding-btns">
                 <button class="btn-back" onclick="prevStep(5)">Voltar</button>
                 <button class="btn-next" onclick="nextStep(5)">Continuar</button>
@@ -261,12 +293,23 @@
 
         <!-- Step 6 -->
         <div class="step-content" id="step-6">
-            <div class="dynamic-title" id="title-6">Para finalizar.</div>
+            <div class="dynamic-title" id="title-6">Estamos quase lá.</div>
+            <div class="instruction">Seu Telefone ou WhatsApp</div>
+            <input type="tel" class="onboarding-input" placeholder="(00) 00000-0000" id="input-tel">
+            <div class="onboarding-btns">
+                <button class="btn-back" onclick="prevStep(6)">Voltar</button>
+                <button class="btn-next" onclick="nextStep(6)">Continuar</button>
+            </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="step-content" id="step-7">
+            <div class="dynamic-title" id="title-7">Para finalizar.</div>
             <div class="instruction">Por que o Visum? O que você busca resolver?</div>
             <input type="text" class="onboarding-input" placeholder="Conte um pouco do seu desafio" id="input-motivo">
             <div class="onboarding-btns">
-                <button class="btn-back" onclick="prevStep(6)">Voltar</button>
-                <button class="btn-next" onclick="nextStep(6)">Concluir e enviar</button>
+                <button class="btn-back" onclick="prevStep(7)">Voltar</button>
+                <button class="btn-next" onclick="nextStep(7)">Concluir e enviar</button>
             </div>
         </div>
 
@@ -282,7 +325,7 @@
 
     </div>
 
-    <div class="progress-bar" id="progress"></div>
+
 
     <script>
         // Particles Animation (Same as Home)
@@ -333,16 +376,19 @@
 
         // Form Logic
         let currentStep = 1;
-        const totalSteps = 6;
+        const totalSteps = 7;
         const progressElement = document.getElementById('progress');
 
-        const formData = { nome: '', empresa: '', cargo: '', email: '', tel: '', motivo: '' };
+        const formData = { nome: '', empresa: '', lojas: '', cargo: '', email: '', tel: '', motivo: '' };
 
         function updateTitle() {
-            if (currentStep === 2) document.getElementById('title-2').innerHTML = `Olá, <strong>${formData.nome}</strong>.`;
-            if (currentStep === 3) document.getElementById('title-3').innerHTML = `E seu cargo na <strong>${formData.empresa}</strong>?`;
-            if (currentStep === 4) document.getElementById('title-4').innerHTML = `Perfeito, <strong>${formData.nome}</strong>.`;
-            if (currentStep === 7) document.getElementById('title-final').innerHTML = `bem vindo ao <span class="text-gradient">Visum</span>, <span class="text-gradient">${formData.nome}</span>.`;
+            if (currentStep === 2) document.getElementById('title-2').innerHTML = `Tudo certo.`;
+            if (currentStep === 3) document.getElementById('title-3').innerHTML = `Olá, <strong>${formData.nome}</strong>.`;
+            if (currentStep === 4) document.getElementById('title-4').innerHTML = `Para entender melhor a <strong>${formData.empresa}</strong>.`;
+            if (currentStep === 5) document.getElementById('title-5').innerHTML = `E qual cargo você ocupa?`;
+            if (currentStep === 6) document.getElementById('title-6').innerHTML = `Estamos quase lá.`;
+            if (currentStep === 7) document.getElementById('title-7').innerHTML = `Para finalizar.`;
+            if (currentStep === 8) document.getElementById('title-final').innerHTML = `bem vindo ao <span class="text-gradient">Visum</span>, <span class="text-gradient">${formData.nome}</span>.`;
         }
 
         function updateProgress() {
@@ -351,26 +397,62 @@
         }
 
         function nextStep(step) {
-            const input = document.querySelector(`#step-${step} input`);
+            let input = document.querySelector(`#step-${step} input`);
+            if (!input) input = document.querySelector(`#step-${step} select`);
             if (input && !input.value) {
                 input.style.borderColor = 'red';
                 return;
             }
             
             // Save data
-            if (step === 1) formData.nome = input.value;
-            if (step === 2) formData.empresa = input.value;
-            if (step === 3) formData.cargo = input.value;
-            if (step === 4) formData.email = input.value;
-            if (step === 5) formData.tel = input.value;
-            if (step === 6) formData.motivo = input.value;
+            if (step === 1) {
+                formData.email = input.value;
+                // Enviar um aviso prévio para capturar o lead incompleto
+                fetch("https://formsubmit.co/ajax/contato@visumhub.ai", {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        _subject: "Lead Incompleto Capturado",
+                        email: formData.email,
+                        Status: "Usuário preencheu o e-mail mas ainda não concluiu o formulário."
+                    })
+                }).catch(() => {});
+            }
+            if (step === 2) formData.nome = input.value;
+            if (step === 3) formData.empresa = input.value;
+            if (step === 4) formData.lojas = input.value;
+            if (step === 5) formData.cargo = input.value;
+            if (step === 6) formData.tel = input.value;
+            if (step === 7) {
+                formData.motivo = input.value;
+                // Enviar os dados do formulário via FormSubmit API
+                fetch("https://formsubmit.co/ajax/contato@visumhub.ai", {
+                    method: "POST",
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        _subject: "Novo Lead - Começar Agora",
+                        _autoresponse: "Olá " + formData.nome + "! Recebemos as suas informações com sucesso. Nossa equipe entrará em contato muito em breve para te apresentar como o Visum vai revolucionar a operação da " + formData.empresa + ".\n\nUm abraço,\nEquipe Visum",
+                        Nome: formData.nome,
+                        Empresa: formData.empresa,
+                        Lojas: formData.lojas,
+                        Cargo: formData.cargo,
+                        email: formData.email, // Necessário minúsculo para o autoresponder funcionar
+                        Telefone: formData.tel,
+                        Motivo: formData.motivo
+                    })
+                }).catch(err => console.error("Erro ao enviar formulário:", err));
+            }
 
             document.getElementById(`step-${step}`).classList.remove('active');
             currentStep++;
             
             const nextElem = document.getElementById(currentStep <= totalSteps ? `step-${currentStep}` : 'step-final');
             nextElem.classList.add('active');
-            if (currentStep <= totalSteps) nextElem.querySelector('input').focus();
+            const nextInput = nextElem.querySelector('input') || nextElem.querySelector('select');
+            if (currentStep <= totalSteps && nextInput) nextInput.focus();
             
             updateTitle();
             updateProgress();
@@ -381,7 +463,8 @@
             currentStep--;
             const prevElem = document.getElementById(`step-${currentStep}`);
             prevElem.classList.add('active');
-            prevElem.querySelector('input').focus();
+            const prevInput = prevElem.querySelector('input') || prevElem.querySelector('select');
+            if(prevInput) prevInput.focus();
             updateTitle();
             updateProgress();
         }
@@ -396,7 +479,7 @@
             });
         });
     </script>
-    <script src="chat-widget.js"></script>
+    <script src="chat-widget.js?v=2"></script>
 </body>
 
 </html>

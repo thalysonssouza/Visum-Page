@@ -1,197 +1,252 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painéis de Análise | Visum</title>
-  <meta name="description" content="Dashboards em tempo real com KPIs, comparativo de lojas e visão executiva da operação. Tudo em um único lugar.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Painéis de Análise | Visum</title>
+<meta content="Dashboards em tempo real com KPIs, comparativo de lojas e visão executiva da operação. Tudo em um único lugar." name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="Favicon 1.0.svg" rel="icon" type="image/svg+xml"/>
 </head>
 <body data-theme="visum">
-  <header>
-    <div class="container nav-container">
-      <a href="index.html" class="logo"><img src="assets/logo-visum.svg" alt="Visum"></a>
-      <nav class="nav-links">
-        <div class="nav-has-dropdown">
-          <button class="nav-dropdown-trigger">Produto <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
-          <div class="nav-mega-panel">
-            <div class="mega-left">
-              <div class="mega-section-label">Produto</div>
-              <a href="produto-chat.html" class="mega-item"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><div class="mega-item-body"><div class="mega-item-title">Chat Visum</div><div class="mega-item-desc">Converse com seus dados operacionais</div></div></a>
-              <a href="produto-insightsealertas.html" class="mega-item"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div><div class="mega-item-body"><div class="mega-item-title">Insights e Alertas</div><div class="mega-item-desc">Padrões ocultos detectados pela IA</div></div></a><a href="produto-tarefas.html" class="mega-item"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div><div class="mega-item-body"><div class="mega-item-title">Tarefas e Checklist</div><div class="mega-item-desc">Transforme insights em ação real</div></div></a>
-              <a href="produto-paineis.html" class="mega-item" style="background:#F5F3FF;"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div><div class="mega-item-body"><div class="mega-item-title" style="color:var(--primary-color);">Painéis de Análise</div><div class="mega-item-desc">Visualize o que importa, em tempo real</div></div></a>
-              <a href="produto-integracoes.html" class="mega-item"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></div><div class="mega-item-body"><div class="mega-item-title">Integrações</div><div class="mega-item-desc">Conecte PDV, delivery e ERPs</div></div></a>
-              <a href="produto-gestao.html" class="mega-item"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><div class="mega-item-body"><div class="mega-item-title">Gestão e Governança</div><div class="mega-item-desc">Controle multiloja com padronização</div></div></a>
-            </div>
-            <div class="mega-right"><div class="mega-right-label">Visum Hub</div><div class="mega-right-title">O centro de controle da sua operação</div><div class="mega-right-desc">Tudo que você precisa para decidir rápido e operar bem.</div><a href="index.html" class="mega-right-btn">Ver produto →</a></div>
-          </div>
-        </div>
-        <a href="planos.html">Planos</a><a href="cases.html">Cases</a><a href="blog.html">Blog</a>
-      </nav>
-      <div class="nav-actions"><a href="https://www.visumhub.com.br/auth/login" style="font-weight:500;">Login</a><a href="comecar.html" class="btn btn-primary">Começar agora</a></div>
-    </div>
-  </header>
-
-  <div class="container">
-    <section class="feature-hero">
-      <div class="feature-hero-content">
-        <div class="feature-badge"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> Painéis de Análise</div>
-        <h1>Visão clara<br><span class="text-gradient">de toda a operação</span></h1>
-        <p class="feature-sub">KPIs, gráficos e comparativos que mostram exatamente o que está acontecendo em cada loja — atualizados em tempo real, sem precisar pedir relatório para ninguém.</p>
-        <div class="feature-actions">
-          <a href="comecar.html" class="btn btn-primary">Ver demonstração</a>
-          <a href="planos.html" class="btn btn-outline">Comparar planos</a>
-        </div>
-      </div>
-      <div class="feature-hero-visual">
-        <div class="dash-mock">
-          <div class="dash-mock-top">
-            <span class="dash-mock-label">Visão Geral · 7 lojas</span>
-            <div class="dash-mock-periods">
-              <div class="dash-mock-period">7d</div>
-              <div class="dash-mock-period active">30d</div>
-              <div class="dash-mock-period">90d</div>
-            </div>
-          </div>
-          <div class="dash-mock-kpis">
-            <div class="dash-mock-kpi"><div class="dash-kpi-label">Faturamento</div><div class="dash-kpi-val">R$ 847k</div><div class="dash-kpi-trend">↑ +12% vs mês ant.</div></div>
-            <div class="dash-mock-kpi"><div class="dash-kpi-label">CMV Médio</div><div class="dash-kpi-val">29,4%</div><div class="dash-kpi-trend">↓ -2.1pp melhorou</div></div>
-            <div class="dash-mock-kpi"><div class="dash-kpi-label">Ticket Médio</div><div class="dash-kpi-val">R$ 68,50</div><div class="dash-kpi-trend">↑ +4% vs mês ant.</div></div>
-          </div>
-          <div class="dash-chart">
-            <div class="dash-chart-label">Faturamento por semana</div>
-            <div class="dash-chart-bars">
-              <div class="dash-bar" style="height:50%"></div>
-              <div class="dash-bar" style="height:65%"></div>
-              <div class="dash-bar" style="height:45%"></div>
-              <div class="dash-bar" style="height:72%"></div>
-              <div class="dash-bar active" style="height:100%"></div>
-              <div class="dash-bar" style="height:60%"></div>
-              <div class="dash-bar" style="height:80%"></div>
-              <div class="dash-bar" style="height:55%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <section class="how-section">
-    <div class="container">
-      <div class="how-inner">
-        <div class="how-visual">
-          <div class="dash-mock" style="min-height:280px;">
-            <div class="dash-mock-top"><span class="dash-mock-label">Ranking de Lojas</span><span style="font-size:0.68rem;color:var(--text-muted);">Este mês</span></div>
-            <div style="display:flex;flex-direction:column;gap:0.4rem;">
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;padding:0.4rem 0;font-size:0.62rem;color:var(--text-muted);font-weight:500;border-bottom:1px solid var(--border-color);">
-                <span>Loja</span><span>Faturamento</span><span>CMV</span>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;padding:0.5rem 0;font-size:0.72rem;align-items:center;">
-                <span style="font-weight:500;">Itaim</span><span>R$ 148k</span><span style="color:#10B981;">27%</span>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;padding:0.5rem 0;font-size:0.72rem;align-items:center;background:#F5F3FF;border-radius:6px;padding-left:0.5rem;">
-                <span style="font-weight:500;">Pinheiros</span><span>R$ 132k</span><span style="color:#10B981;">28%</span>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;padding:0.5rem 0;font-size:0.72rem;align-items:center;">
-                <span style="font-weight:500;">Vila Olímpia</span><span>R$ 121k</span><span style="color:#F59E0B;">34%</span>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;padding:0.5rem 0;font-size:0.72rem;align-items:center;">
-                <span style="font-weight:500;">Santo André</span><span>R$ 98k</span><span style="color:#EF4444;">38%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="how-content">
-          <h2>Como funciona</h2>
-          <p>Dados de todas as suas fontes, consolidados em painéis prontos. Você personaliza o que quer ver e compartilha com quem precisa.</p>
-          <div class="how-acc-item"><div class="how-acc-header"><span class="how-acc-title">Atualização automática, sem clique</span><svg class="how-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="how-acc-body">Os dados chegam do PDV e delivery automaticamente. Você não precisa exportar, copiar ou atualizar nada manualmente.</div></div>
-          <div class="how-acc-item"><div class="how-acc-header"><span class="how-acc-title">Comparativo de lojas em tempo real</span><svg class="how-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="how-acc-body">Veja de imediato quais lojas estão acima e abaixo da média da rede, em faturamento, CMV, ticket médio e avaliações.</div></div>
-          <div class="how-acc-item"><div class="how-acc-header"><span class="how-acc-title">KPIs configuráveis por papel</span><svg class="how-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="how-acc-body">O dono vê a visão executiva. O gerente vê a loja dele. O supervisor vê o grupo de lojas que gerencia. Cada um vê o que precisa.</div></div>
-          <div class="how-acc-item"><div class="how-acc-header"><span class="how-acc-title">Relatórios automáticos por e-mail</span><svg class="how-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="how-acc-body">Configure horários de envio e o Visum entrega automaticamente os indicadores do dia anterior para a diretoria — sem precisar gerar nada.</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="benefits-section">
-    <div class="container">
-      <div class="section-title"><h2>O que você visualiza</h2><p>Painéis prontos para os principais KPIs do seu negócio.</p></div>
-      <div class="benefits-grid">
-        <div class="benefit-card"><div class="benefit-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div><div class="benefit-title">Vendas e faturamento</div><div class="benefit-desc">Por loja, por canal, por turno, por produto. Comparativo diário, semanal e mensal com tendência.</div></div>
-        <div class="benefit-card"><div class="benefit-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div><div class="benefit-title">CMV e margem</div><div class="benefit-desc">Custo de Mercadoria Vendida por produto e categoria. Volume, ruptura e desvio em relação ao alvo.</div></div>
-        <div class="benefit-card"><div class="benefit-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><div class="benefit-title">NPS e avaliações</div><div class="benefit-desc">Acompanhe as avaliações do iFood, Google e Rappi em um painel unificado. Identifique problemas antes que escalem.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="value-proof">
-    <div class="container">
-      <div class="value-proof-inner">
-        <div class="value-stats">
-          <div class="value-stat"><strong>1 tela</strong><span>Para ver o que antes precisava de 3 sistemas</span></div>
-          <div class="value-stat"><strong>Real-time</strong><span>Atualização contínua sem exportar planilha</span></div>
-          <div class="value-stat"><strong>+30min</strong><span>Por dia economizados em coleta de dados</span></div>
-        </div>
-        <div class="value-text">
-          <h2>Decisão rápida começa com visibilidade clara</h2>
-          <p>Quando cada gerente sabe exatamente como sua loja está performando agora, a ação corretiva vem antes do prejuízo.</p>
-          <a href="comecar.html" class="btn value-cta-btn">Começar agora →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="faq-section">
-    <div class="container">
-      <div class="section-title"><h2>Perguntas frequentes</h2></div>
-      <div class="faq-list">
-        <div class="faq-item"><div class="faq-question">Os painéis são atualizados com qual frequência? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="faq-answer">Em tempo real para os dados do PDV e delivery. Para ERPs, a frequência depende da integração configurada — geralmente a cada hora.</div></div>
-        <div class="faq-item"><div class="faq-question">Posso personalizar quais indicadores aparecem? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="faq-answer">Sim. Você escolhe os KPIs principais, define seus alvos e configura o que cada perfil de usuário enxerga no painel.</div></div>
-        <div class="faq-item"><div class="faq-question">Consigo exportar os dados para apresentação? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="faq-answer">Sim. Os relatórios podem ser exportados em PDF ou enviados automaticamente por e-mail no horário que você definir.</div></div>
-        <div class="faq-item"><div class="faq-question">Posso comparar um período com outro? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="faq-answer">Sim. Você pode comparar dia a dia, semana a semana e mês a mês — com variação percentual calculada automaticamente.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="feature-final-cta">
-    <div class="container">
-      <h2>Veja sua operação com<br><span class="text-gradient">clareza total</span></h2>
-      <p>Dashboards em tempo real. KPIs que importam. Decisões mais rápidas.</p>
-      <div class="feature-actions" style="justify-content:center;">
-        <a href="comecar.html" class="btn btn-primary">Testar grátis</a>
-        <a href="produto-integracoes.html" class="btn btn-outline">Ver integrações</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-logo-side">
-          <img src="assets/logo-visum.svg" alt="Visum" class="footer-visum-logo">
-          <h3><img src="assets/logo-trusted%202.svg" alt="Trusted"> Um produto Trusted</h3>
-          <div class="newsletter-widget">
-            <h4 style="font-size: 0.85rem; font-weight: 400; color: var(--text-muted); margin-bottom: 0.75rem;">assine nossa newsletter</h4>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); var msg = this.querySelector('.newsletter-message'); msg.textContent = 'Inscrição confirmada com sucesso!'; msg.classList.add('success'); this.reset();">
-              <div class="newsletter-input-group">
-                <input type="email" placeholder="Seu melhor e-mail" required>
-                <button type="submit" class="newsletter-btn" aria-label="Assinar">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
-                </button>
-              </div>
-              <div class="newsletter-message"></div>
-            </form>
-          </div>
-        </div>
-        <div class="footer-nav-col"><h4>Visum</h4><ul><li><a href="historia.html">Sobre</a></li><li><a href="planos.html">Planos</a></li><li><a href="cases.html">Cases</a></li></ul></div>
-        <div class="footer-nav-col"><h4>Produtos</h4><ul><li><a href="produto-chat.html">Chat Visum</a></li><li><a href="produto-tarefas.html">Tarefas</a></li><li><a href="produto-paineis.html">Painéis</a></li><li><a href="produto-integracoes.html">Integrações</a></li><li><a href="produto-gestao.html">Gestão</a></li></ul></div>
-        <div class="footer-nav-col"><h4>Comunidade</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="cases.html">Cases</a></li><li><a href="https://parceiros.visumhub.ai/">Parceiros</a></li></ul></div>
-      </div>
-      <div class="footer-display-name"><div class="floating-ai-container"><img src="assets/IconAI-intelligentproduct.png" alt="AI" class="floating-ai-icon"></div><h2 class="text-gradient">Copiloto Inteligente</h2></div>
-      <div class="footer-bottom"><div class="footer-bottom-info">Visum 2026</div><div class="footer-bottom-links"><a href="#">Privacidade</a><a href="#">Termos</a><a href="https://www.instagram.com/visumhubai" class="footer-social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a><a href="https://www.linkedin.com/company/visum-hub-ai/" class="footer-social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a></div></div>
-    </div>
-  </footer>
-  <script src="mega-menu.js"></script>
-    <script src="chat-widget.js"></script>
+<header>
+<div class="container nav-container">
+<a class="logo" href="index.html" id="site-logo">
+<img alt="Visum" src="assets/logo-visum.svg"/>
+</a>
+<nav class="nav-links">
+<div class="nav-has-dropdown">
+<button class="nav-dropdown-trigger">
+                        Produto
+                        <svg class="nav-dropdown-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="12">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="nav-mega-panel">
+<div class="mega-left">
+<div class="mega-section-label">Produto</div>
+<a class="mega-item" href="produto-chat.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Chat Visum</div>
+<div class="mega-item-desc">Converse com seus dados operacionais</div>
+</div>
+</a>
+<a class="mega-item" href="produto-insightsealertas.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Insights e Alertas</div>
+<div class="mega-item-desc">Padrões ocultos detectados pela IA</div>
+</div>
+</a>
+<a class="mega-item" href="produto-tarefas.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M9 11l3 3L22 4"></path>
+<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Tarefas e Checklist</div>
+<div class="mega-item-desc">Transforme insights em ação real</div>
+</div>
+</a>
+<a class="mega-item" href="produto-paineis.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<rect height="7" width="7" x="3" y="3"></rect>
+<rect height="7" width="7" x="14" y="3"></rect>
+<rect height="7" width="7" x="14" y="14"></rect>
+<rect height="7" width="7" x="3" y="14"></rect>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Painéis de Análise</div>
+<div class="mega-item-desc">Visualize o que importa, em tempo real</div>
+</div>
+</a>
+<a class="mega-item" href="produto-integracoes.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Integrações</div>
+<div class="mega-item-desc">Conecte PDV, Delivery, Avaliações, Redes sociais, ERP (Enterprise)</div>
+</div>
+</a>
+<a class="mega-item" href="produto-gestao.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Gestão e Governança</div>
+<div class="mega-item-desc">Controle multiloja com padronização</div>
+</div>
+</a>
+</div>
+<div class="mega-right">
+<div class="mega-right-label">Visum Hub</div>
+<div class="mega-right-title">O centro de controle da sua operação</div>
+<div class="mega-right-desc">Tudo que você precisa para decidir rápido e operar bem.</div>
+<a class="mega-right-btn" href="index.html">Ver produto →</a>
+</div>
+</div>
+</div>
+<a href="planos.html">Planos</a>
+<a href="cases.html">Cases</a>
+<a href="blog.html">Blog</a>
+</nav>
+<div class="nav-actions">
+<a href="https://www.visumhub.com.br/auth/login" style="font-weight: 500;">Login</a>
+<a class="btn btn-primary" href="comecar.html">Começar agora</a>
+</div>
+</div>
+</header>
+<!-- Mobile Navigation Drawer -->
+<nav aria-label="Menu de navegação mobile" class="nav-mobile-drawer">
+<div class="nav-mobile-section-label">Produto</div>
+<a class="nav-mobile-link" href="produto-chat.html">Chat Visum</a>
+<a class="nav-mobile-link" href="produto-tarefas.html">Tarefas e Checklist</a>
+<a class="nav-mobile-link" href="produto-paineis.html">Painéis de Análise</a>
+<a class="nav-mobile-link" href="produto-integracoes.html">Integrações</a>
+<a class="nav-mobile-link" href="produto-gestao.html">Gestão e Governança</a>
+<div class="nav-mobile-section-label">Visum</div>
+<a class="nav-mobile-link" href="planos.html">Planos</a>
+<a class="nav-mobile-link" href="cases.html">Cases</a>
+<a class="nav-mobile-link" href="blog.html">Blog</a>
+<div class="nav-mobile-actions">
+<a class="btn btn-outline" href="https://www.visumhub.com.br/auth/login">Login</a>
+<a class="btn btn-primary" href="comecar.html">Começar agora</a>
+</div>
+</nav>
+<section class="feature-hero section-bg-white"><div class="container">
+<div class="feature-hero-content">
+<div class="feature-badge"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg> Painéis de Análise</div>
+<h1>Visão clara<br/><span class="text-gradient">de toda a operação</span></h1>
+<p class="feature-sub">KPIs, gráficos e comparativos que mostram exatamente o que está acontecendo em cada loja atualizados em tempo real, sem precisar pedir relatório para ninguém.</p>
+<div class="feature-actions">
+<a class="btn btn-primary" href="comecar.html">Ver demonstração</a>
+<a class="btn btn-outline" href="planos.html">Comparar planos</a>
+</div>
+</div>
+<div class="feature-hero-visual">
+<img alt="Dados Consolidados" src="assets/paineis-de-analise/paineis-de-analise-dados-consolidados.png" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);"/>
+</div>
+</div></section>
+<section class="how-section section-bg-gray">
+<div class="container">
+<div class="how-inner">
+<div class="how-visual">
+<img alt="KPIs e Gráficos" src="assets/paineis-de-analise/paineis-de-analise-kpis-e-graficos.png" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);"/>
+</div>
+<div class="how-content">
+<h2 class="text-gradient">Como funciona</h2>
+<p>Dados de todas as suas fontes, consolidados em painéis prontos. Você personaliza o que quer ver e compartilha com quem precisa.</p>
+<div class="how-acc-item"><div class="how-acc-header"><span class="how-acc-title">Atualização automática, sem clique</span><svg class="how-acc-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="how-acc-body">Os dados chegam do PDV, Delivery, Avaliações, Redes sociais, ERP (Enterprise) automaticamente. Você não precisa exportar, copiar ou atualizar nada manualmente.</div></div>
+<div class="how-acc-item"><div class="how-acc-header"><span class="how-acc-title">Comparativo de lojas em tempo real</span><svg class="how-acc-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="how-acc-body">Veja de imediato quais lojas estão acima e abaixo da média da rede, em faturamento, custos, ticket médio e avaliações.</div></div>
+<div class="how-acc-item"><div class="how-acc-header"><span class="how-acc-title">KPIs configuráveis por papel</span><svg class="how-acc-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="how-acc-body">O dono vê a visão executiva. O gerente vê a loja dele. O supervisor vê o grupo de lojas que gerencia. Cada um vê o que precisa.</div></div>
+<div class="how-acc-item"><div class="how-acc-header"><span class="how-acc-title">Relatórios automáticos por e-mail</span><svg class="how-acc-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="how-acc-body">Configure horários de envio e o Visum entrega automaticamente os indicadores do dia anterior para a diretoria sem precisar gerar nada.</div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="benefits-section section-bg-white">
+<div class="container">
+<div class="section-title"><h2 class="text-gradient">O que você visualiza</h2><p>Painéis prontos para os principais KPIs do seu negócio.</p></div>
+<div class="benefits-grid">
+<div class="benefit-card"><div class="benefit-icon"><svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg></div><div class="benefit-title">Vendas e faturamento</div><div class="benefit-desc">Por loja, por canal, por turno, por produto. Comparativo diário, semanal e mensal com tendência.</div></div>
+<div class="benefit-card"><div class="benefit-icon"><svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div><div class="benefit-title">Custos e margem</div><div class="benefit-desc">Custo de Mercadoria Vendida por produto e categoria. Volume, ruptura e desvio em relação ao alvo.</div></div>
+<div class="benefit-card"><div class="benefit-icon"><svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><div class="benefit-title">NPS e avaliações</div><div class="benefit-desc">Acompanhe as avaliações do iFood, Google e Rappi em um painel unificado. Identifique problemas antes que escalem.</div></div>
+</div>
+</div>
+</section>
+<section class="value-proof section-bg-gray">
+<div class="container">
+<div class="value-proof-inner">
+<div class="value-stats">
+<div class="value-stat"><strong>1 tela</strong><span>Para ver o que antes precisava de 3 sistemas</span></div>
+<div class="value-stat"><strong>Real-time</strong><span>Atualização contínua sem exportar planilha</span></div>
+<div class="value-stat"><strong>+30min</strong><span>Por dia economizados em coleta de dados</span></div>
+</div>
+<div class="value-text">
+<h2>Decisão rápida começa com visibilidade clara</h2>
+<p>Quando cada gerente sabe exatamente como sua loja está performando agora, a ação corretiva vem antes do prejuízo.</p>
+<a class="btn value-cta-btn" href="comecar.html">Começar agora →</a>
+</div>
+</div>
+</div>
+</section>
+<section class="faq-section section-bg-white">
+<div class="container">
+<div class="section-title"><h2 class="text-gradient">Perguntas frequentes</h2></div>
+<div class="faq-list">
+<div class="faq-item"><div class="faq-question">Os painéis são atualizados com qual frequência? <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="faq-answer">Em tempo real para os dados do PDV, Delivery, Avaliações, Redes sociais, ERP (Enterprise). Para ERPs, a frequência depende da integração configurada geralmente a cada hora.</div></div>
+<div class="faq-item"><div class="faq-question">Posso personalizar quais indicadores aparecem? <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="faq-answer">Sim. Você escolhe os KPIs principais, define seus alvos e configura o que cada perfil de usuário enxerga no painel.</div></div>
+<div class="faq-item"><div class="faq-question">Consigo exportar os dados para apresentação? <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="faq-answer">Sim. Os relatórios podem ser exportados em PDF ou enviados automaticamente por e-mail no horário que você definir.</div></div>
+<div class="faq-item"><div class="faq-question">Posso comparar um período com outro? <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="faq-answer">Sim. Você pode comparar dia a dia, semana a semana e mês a mês com variação percentual calculada automaticamente.</div></div>
+</div>
+</div>
+</section>
+<section class="feature-final-cta section-bg-gray">
+<div class="container">
+<h2>Veja sua operação com<br/><span class="text-gradient">clareza total</span></h2>
+<p>Dashboards em tempo real. KPIs que importam. Decisões mais rápidas.</p>
+<div class="feature-actions" style="justify-content:center;">
+<a class="btn btn-primary" href="comecar.html">Testar grátis</a>
+<a class="btn btn-outline" href="produto-integracoes.html">Ver integrações</a>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-logo-side">
+<img alt="Visum" class="footer-visum-logo" src="assets/logo-visum.svg"/>
+<h3><img alt="Trusted" src="assets/logo-trusted%202.svg"/> Um produto Trusted</h3>
+<div class="newsletter-widget">
+<h4 style="font-size: 0.85rem; font-weight: 400; color: var(--text-muted); margin-bottom: 0.75rem;">assine nossa newsletter</h4>
+<form class="newsletter-form" onsubmit="event.preventDefault(); var form = this; var msg = form.querySelector('.newsletter-message'); var email = form.querySelector('input[type=email]').value; fetch('https://formsubmit.co/ajax/contato@visumhub.ai', {method: 'POST', headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}, body: JSON.stringify({email: email, _subject: 'Nova Inscrição na Newsletter', _autoresponse: 'Olá! Você acabou de se inscrever na newsletter do Visum Hub. Muito em breve você passará a receber nossos melhores insights operacionais. Um abraço, Equipe Visum'})}).then(function(){ msg.textContent = 'Inscrição confirmada com sucesso!'; msg.classList.add('success'); form.reset(); }).catch(function(){ msg.textContent = 'Erro ao se inscrever.'; msg.style.color='red'; });">
+<div class="newsletter-input-group">
+<input placeholder="Seu melhor e-mail" required="" type="email"/>
+<button aria-label="Assinar" class="newsletter-btn" type="submit">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+</button>
+</div>
+<div class="newsletter-message"></div>
+</form>
+</div>
+</div>
+<div class="footer-nav-col"><h4>Visum</h4><ul><li><a href="historia.html">Sobre</a></li><li><a href="planos.html">Planos</a></li><li><a href="cases.html">Cases</a></li></ul></div>
+<div class="footer-nav-col"><h4>Produtos</h4><ul><li><a href="produto-chat.html">Chat Visum</a></li><li><a href="produto-tarefas.html">Tarefas</a></li><li><a href="produto-paineis.html">Painéis</a></li><li><a href="produto-integracoes.html">Integrações</a></li><li><a href="produto-gestao.html">Gestão</a></li></ul></div>
+<div class="footer-nav-col"><h4>Comunidade</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="cases.html">Cases</a></li><li><a href="https://parceiros.visumhub.ai/">Parceiros</a></li></ul></div>
+</div>
+<div class="footer-display-name"><div class="floating-ai-container"><img alt="AI" class="floating-ai-icon" src="assets/IconAI-intelligentproduct.png"/></div><h2 class="text-gradient">Copiloto Inteligente</h2></div>
+<div class="footer-bottom"><div class="footer-bottom-info">Visum 2026</div><div class="footer-bottom-links"><a href="https://www.visumhub.com.br/politica-de-privacidade">Privacidade</a><a href="https://www.visumhub.com.br/termos-de-uso">Termos</a><div class="footer-social-icons" style="display: flex; gap: 0.5rem; position: relative; z-index: 9999; pointer-events: auto;">
+<a class="footer-social-link" href="https://www.instagram.com/visumhubai" target="_blank" rel="noopener noreferrer">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+<line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+</svg>
+</a>
+<a class="footer-social-link" href="https://www.linkedin.com/company/visum-hub-ai/" target="_blank" rel="noopener noreferrer">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+<rect height="12" width="4" x="2" y="9"></rect>
+<circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a class="footer-social-link" href="https://x.com/visumhubai" target="_blank" rel="noopener noreferrer">
+<svg fill="currentColor" stroke="none" height="24" viewbox="0 0 24 24" width="24">
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+</svg>
+</a>
+</div></div></div>
+</div>
+</footer>
+<script src="mega-menu.js"></script>
+<script src="chat-widget.js?v=2"></script>
 </body>
 </html>

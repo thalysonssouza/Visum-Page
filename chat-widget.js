@@ -4,8 +4,8 @@
   /* ─────────────────────────────────────────
      LINKS
   ───────────────────────────────────────── */
-  const WHATSAPP_URL = 'https://wa.me/+61981993389';
-  const CALENDAR_URL = 'https://outlook.office.com/bookwithme/user/79c79516b3b64a62b6460255b3ee847d@trustedsolutions.com.br/meetingtype/dNCfStyqGUiONM2wExeZ9g2?anonymous&ep=mlink';
+  const WHATSAPP_URL = 'https://wa.me/+11996735363';
+  const CALENDAR_URL = 'https://outlook.office.com/book/Visum1@visumhub.ai/?ismsaljsauthenabled=true';
 
   /* ─────────────────────────────────────────
      STYLES
@@ -13,23 +13,23 @@
   const CSS = `
     #vcw-root {
       position: fixed;
-      bottom: 28px;
-      right: 28px;
+      bottom: 24px;
+      right: 24px;
       z-index: 99999;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 12px;
+      gap: 10px;
       font-family: 'Switzer', 'Inter', sans-serif;
+      pointer-events: none;
     }
 
-    /* ── Floating button ── */
     #vcw-btn {
-      width: 58px;
-      height: 58px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #884FFF, #7B2BFC);
-      box-shadow: 0 4px 24px rgba(136, 79, 255, 0.45);
+      background: #111827;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
       border: none;
       cursor: pointer;
       display: flex;
@@ -38,11 +38,14 @@
       transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.25s;
       position: relative;
       flex-shrink: 0;
+      overflow: hidden;
+      padding: 0;
+      pointer-events: auto;
     }
 
     #vcw-btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 6px 32px rgba(136, 79, 255, 0.6);
+      transform: scale(1.06);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
     }
 
     #vcw-btn .vcw-btn-icon {
@@ -66,36 +69,20 @@
       transform: rotate(0deg) scale(1);
     }
 
-    /* Pulse ring */
-    #vcw-btn::before {
-      content: '';
-      position: absolute;
-      inset: -5px;
-      border-radius: 50%;
-      border: 2px solid rgba(136, 79, 255, 0.4);
-      animation: vcw-pulse 2.4s ease-out infinite;
-    }
-
-    @keyframes vcw-pulse {
-      0%   { transform: scale(1); opacity: 1; }
-      70%  { transform: scale(1.3); opacity: 0; }
-      100% { transform: scale(1.3); opacity: 0; }
-    }
-
     /* ── Chat window ── */
     #vcw-window {
-      width: 340px;
+      width: 336px;
       background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.14), 0 2px 8px rgba(0,0,0,0.08);
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.06);
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transform: translateY(16px) scale(0.95);
+      transform: translateY(12px) scale(0.96);
       opacity: 0;
       pointer-events: none;
-      transition: transform 0.3s cubic-bezier(.34,1.56,.64,1), opacity 0.25s ease;
-      max-height: 520px;
+      transition: transform 0.28s cubic-bezier(.34,1.56,.64,1), opacity 0.22s ease;
+      max-height: 500px;
     }
 
     #vcw-root.vcw-open #vcw-window {
@@ -104,25 +91,33 @@
       pointer-events: all;
     }
 
-    /* Header */
+    /* Header — minimal white */
     .vcw-header {
-      background: linear-gradient(135deg, #6B2EFF, #884FFF);
-      padding: 18px 20px;
+      background: #ffffff;
+      border-bottom: 1px solid #f0f0f0;
+      padding: 14px 16px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 11px;
     }
 
     .vcw-header-avatar {
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.18);
+      background: #f3f4f6;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      border: 1.5px solid rgba(255,255,255,0.3);
+      border: 1.5px solid #e5e7eb;
+      overflow: hidden;
+    }
+
+    .vcw-header-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .vcw-header-info {
@@ -130,8 +125,8 @@
     }
 
     .vcw-header-name {
-      color: white;
-      font-size: 0.9rem;
+      color: #111827;
+      font-size: 0.875rem;
       font-weight: 600;
       line-height: 1.2;
       letter-spacing: -0.01em;
@@ -145,33 +140,28 @@
     }
 
     .vcw-status-dot {
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
-      background: #4ade80;
-      box-shadow: 0 0 6px #4ade80;
-      animation: vcw-blink 2s ease-in-out infinite;
-    }
-
-    @keyframes vcw-blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
+      background: #22c55e;
+      flex-shrink: 0;
     }
 
     .vcw-header-status span {
-      color: rgba(255,255,255,0.8);
+      color: #6b7280;
       font-size: 0.72rem;
       font-weight: 400;
     }
 
     /* Messages area */
     .vcw-messages {
-      padding: 20px 16px 12px;
+      padding: 16px 14px 10px;
       display: flex;
       flex-direction: column;
       gap: 10px;
       flex: 1;
       overflow-y: auto;
+      background: #fafafa;
     }
 
     /* AI message bubble */
@@ -185,40 +175,50 @@
       width: 28px;
       height: 28px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #6B2EFF, #884FFF);
+      background: #e5e7eb;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+
+    .vcw-msg-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .vcw-bubble {
-      background: #F4F0FF;
-      border-radius: 16px 16px 16px 4px;
-      padding: 11px 14px;
-      font-size: 0.875rem;
-      color: #1a1a2e;
-      line-height: 1.5;
-      max-width: 240px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px 14px 14px 4px;
+      padding: 10px 13px;
+      font-size: 0.855rem;
+      color: #111827;
+      line-height: 1.55;
+      max-width: 230px;
       font-weight: 400;
       animation: vcw-pop 0.3s cubic-bezier(.34,1.56,.64,1);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
 
     @keyframes vcw-pop {
-      from { transform: scale(0.85) translateY(8px); opacity: 0; }
+      from { transform: scale(0.88) translateY(6px); opacity: 0; }
       to   { transform: scale(1) translateY(0); opacity: 1; }
     }
 
     /* User bubble */
     .vcw-bubble-user {
-      background: linear-gradient(135deg, #6B2EFF, #884FFF);
+      background: #111827;
       color: white;
-      border-radius: 16px 16px 4px 16px;
+      border-radius: 14px 14px 4px 14px;
       align-self: flex-end;
-      font-size: 0.875rem;
-      padding: 11px 14px;
-      line-height: 1.5;
-      max-width: 220px;
+      font-size: 0.855rem;
+      padding: 10px 13px;
+      line-height: 1.55;
+      max-width: 210px;
       font-weight: 400;
       animation: vcw-pop 0.3s cubic-bezier(.34,1.56,.64,1);
     }
@@ -228,17 +228,19 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      padding: 12px 14px;
-      background: #F4F0FF;
-      border-radius: 16px 16px 16px 4px;
+      padding: 11px 13px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px 14px 14px 4px;
       width: fit-content;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
       animation: vcw-pop 0.3s cubic-bezier(.34,1.56,.64,1);
     }
 
     .vcw-typing span {
-      width: 6px;
-      height: 6px;
-      background: #884FFF;
+      width: 5px;
+      height: 5px;
+      background: #9ca3af;
       border-radius: 50%;
       animation: vcw-dot 1.2s ease-in-out infinite;
     }
@@ -247,16 +249,17 @@
     .vcw-typing span:nth-child(3) { animation-delay: 0.4s; }
 
     @keyframes vcw-dot {
-      0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
-      30% { transform: translateY(-5px); opacity: 1; }
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.35; }
+      30% { transform: translateY(-4px); opacity: 1; }
     }
 
     /* Options */
     .vcw-options {
-      padding: 0 16px 20px;
+      padding: 12px 14px 16px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 7px;
+      background: #ffffff;
       animation: vcw-pop 0.35s cubic-bezier(.34,1.56,.64,1);
     }
 
@@ -264,42 +267,43 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 13px 16px;
-      border-radius: 12px;
-      border: 1.5px solid #E8E0FF;
-      background: white;
+      padding: 11px 14px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      background: #fafafa;
       cursor: pointer;
-      font-size: 0.875rem;
+      font-size: 0.855rem;
       font-weight: 500;
-      color: #1a1a2e;
+      color: #111827;
       font-family: inherit;
-      transition: all 0.2s ease;
+      transition: all 0.18s ease;
       text-align: left;
       width: 100%;
     }
 
     .vcw-opt-btn:hover {
-      background: #F4F0FF;
-      border-color: #884FFF;
-      color: #6B2EFF;
-      transform: translateX(3px);
+      background: #f3f4f6;
+      border-color: #d1d5db;
+      color: #000000;
+      transform: translateX(2px);
     }
 
     .vcw-opt-btn .vcw-opt-icon {
-      font-size: 1.1rem;
+      font-size: 1rem;
       flex-shrink: 0;
     }
 
     /* Divider */
     .vcw-divider {
       border: none;
-      border-top: 1px solid #F0ECF8;
-      margin: 0 16px;
+      border-top: 1px solid #f0f0f0;
+      margin: 0;
     }
   `;
 
   /* ─────────────────────────────────────────
      HTML
+
   ───────────────────────────────────────── */
   const HTML = `
     <div id="vcw-root">
@@ -307,12 +311,10 @@
       <div id="vcw-window" role="dialog" aria-label="Chat Visum" aria-modal="true">
         <div class="vcw-header">
           <div class="vcw-header-avatar">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            </svg>
+            <img src="assets/ana-visum-avatar.png" alt="Ana" loading="lazy">
           </div>
           <div class="vcw-header-info">
-            <div class="vcw-header-name">Inteligência Visum</div>
+            <div class="vcw-header-name">Ana · Visum</div>
             <div class="vcw-header-status">
               <div class="vcw-status-dot"></div>
               <span>Online agora</span>
@@ -359,9 +361,7 @@
       row.className = 'vcw-msg-row';
       row.innerHTML = `
         <div class="vcw-msg-avatar">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-          </svg>
+          <img src="assets/ana-visum-avatar.png" alt="Ana" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="vcw-bubble">${html}</div>
       `;
@@ -383,9 +383,7 @@
     row.id = 'vcw-typing-row';
     row.innerHTML = `
       <div class="vcw-msg-avatar">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-        </svg>
+        <img src="assets/ana-visum-avatar.png" alt="Ana" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="vcw-typing"><span></span><span></span><span></span></div>
     `;
@@ -417,7 +415,7 @@
 
     setTimeout(() => {
       removeTyping();
-      addMsg('Olá! 👋 Sou a <strong>Inteligência Visum</strong>.<br>Como você prefere continuar?');
+      addMsg('Olá! 👋 Sou a <strong>Ana</strong>, da equipe Visum.<br>Como posso te ajudar hoje?');
 
       // Step 2 – show options
       setTimeout(() => {

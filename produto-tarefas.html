@@ -1,230 +1,270 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarefas e Checklist | Visum</title>
-  <meta name="description" content="Transforme insights em ação. Checklists, tarefas e rotinas operacionais que garantem execução consistente nas suas lojas.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tarefas e Checklist | Visum</title>
+<meta content="Transforme insights em ação. Checklists, tarefas e rotinas operacionais que garantem execução consistente nas suas lojas." name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="Favicon 1.0.svg" rel="icon" type="image/svg+xml"/>
 </head>
 <body data-theme="visum">
-
-  <header>
-    <div class="container nav-container">
-      <a href="index.html" class="logo"><img src="assets/logo-visum.svg" alt="Visum"></a>
-      <nav class="nav-links">
-        <div class="nav-has-dropdown">
-          <button class="nav-dropdown-trigger">Produto <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
-          <div class="nav-mega-panel">
-            <div class="mega-left">
-              <div class="mega-section-label">Produto</div>
-              <a href="produto-chat.html" class="mega-item"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><div class="mega-item-body"><div class="mega-item-title">Chat Visum</div><div class="mega-item-desc">Converse com seus dados operacionais</div></div></a>
-              <a href="produto-tarefas.html" class="mega-item" style="background:#F5F3FF;"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div><div class="mega-item-body"><div class="mega-item-title" style="color:var(--primary-color);">Tarefas e Checklist</div><div class="mega-item-desc">Transforme insights em ação real</div></div></a>
-              <a href="produto-paineis.html" class="mega-item"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div><div class="mega-item-body"><div class="mega-item-title">Painéis de Análise</div><div class="mega-item-desc">Visualize o que importa, em tempo real</div></div></a>
-              <a href="produto-integracoes.html" class="mega-item"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></div><div class="mega-item-body"><div class="mega-item-title">Integrações</div><div class="mega-item-desc">Conecte PDV, delivery e ERPs</div></div></a>
-              <a href="produto-gestao.html" class="mega-item"><div class="mega-item-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><div class="mega-item-body"><div class="mega-item-title">Gestão e Governança</div><div class="mega-item-desc">Controle multiloja com padronização</div></div></a>
-            </div>
-            <div class="mega-right">
-              <div class="mega-right-label">Visum Hub</div>
-              <div class="mega-right-title">O centro de controle da sua operação</div>
-              <div class="mega-right-desc">Tudo que você precisa para decidir rápido e operar bem.</div>
-              <a href="index.html" class="mega-right-btn">Ver produto →</a>
-            </div>
-          </div>
-        </div>
-        <a href="planos.html">Planos</a>
-        <a href="cases.html">Cases</a>
-        <a href="blog.html">Blog</a>
-      </nav>
-      <div class="nav-actions">
-        <a href="https://www.visumhub.com.br/auth/login" style="font-weight:500;">Login</a>
-        <a href="comecar.html" class="btn btn-primary">Começar agora</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <div class="container">
-    <section class="feature-hero">
-      <div class="feature-hero-content">
-        <div class="feature-badge"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg> Tarefas e Checklist</div>
-        <h1>Do insight<br><span class="text-gradient">à execução</span></h1>
-        <p class="feature-sub">Transforme cada alerta e recomendação em tarefas concretas, com responsável, prazo e acompanhamento em tempo real. Sem perder nada no caminho.</p>
-        <div class="feature-actions">
-          <a href="comecar.html" class="btn btn-primary">Começar grátis</a>
-          <a href="cases.html" class="btn btn-outline">Ver resultados</a>
-        </div>
-      </div>
-      <div class="feature-hero-visual">
-        <div class="task-mock2">
-          <div class="task-mock2-top">
-            <span class="task-mock2-label">Tarefas</span>
-            <div class="task-create-btn2"><svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg> Criar tarefa</div>
-          </div>
-          <div class="task-cols">
-            <div>
-              <div class="task-col-head"><span>ABERTAS</span><span>4</span></div>
-              <div class="task-mini-card"><div class="task-mini-title">Abertura — Turno Manhã</div><div class="task-mini-tag p">Aberta</div><div class="task-mini-prog"><div class="task-mini-fill" style="width:10%"></div></div></div>
-              <div class="task-mini-card"><div class="task-mini-title">Revisar cardápio iFood</div><div class="task-mini-tag p">Aberta</div><div class="task-mini-prog"><div class="task-mini-fill" style="width:0%"></div></div></div>
-            </div>
-            <div>
-              <div class="task-col-head"><span>EM PROGRESSO</span><span>3</span></div>
-              <div class="task-mini-card"><div class="task-mini-title">Investigar CMV Frango Grelhado</div><div class="task-mini-tag o">Em andamento</div><div class="task-mini-prog"><div class="task-mini-fill" style="width:55%"></div></div></div>
-              <div class="task-mini-card"><div class="task-mini-title">Limpeza da câmara fria</div><div class="task-mini-tag o">Em andamento</div><div class="task-mini-prog"><div class="task-mini-fill" style="width:70%"></div></div></div>
-            </div>
-            <div>
-              <div class="task-col-head"><span>CONCLUÍDAS</span><span>8</span></div>
-              <div class="task-mini-card"><div class="task-mini-title">Ajuste de preço — Delivery</div><div class="task-mini-tag g">Concluída</div><div class="task-mini-prog"><div class="task-mini-fill" style="width:100%"></div></div></div>
-              <div class="task-mini-card"><div class="task-mini-title">Treinamento da equipe noturna</div><div class="task-mini-tag g">Concluída</div><div class="task-mini-prog"><div class="task-mini-fill" style="width:100%"></div></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- COMO FUNCIONA -->
-  <section class="how-section">
-    <div class="container">
-      <div class="how-inner">
-        <div class="how-visual">
-          <div style="padding:1.5rem;background:#F8F8FC;min-height:300px;">
-            <div style="font-size:0.75rem;font-weight:600;margin-bottom:1rem;color:var(--text-muted);">CHECKLIST DE ABERTURA — Turno manhã</div>
-            <div style="display:flex;flex-direction:column;gap:0.5rem;">
-              <div style="display:flex;align-items:center;gap:0.75rem;background:white;padding:0.625rem 0.875rem;border-radius:8px;border:1px solid var(--border-color);font-size:0.78rem;">
-                <div style="width:16px;height:16px;background:#10B981;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="10" height="10" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                Verificar temperatura da câmara fria
-              </div>
-              <div style="display:flex;align-items:center;gap:0.75rem;background:white;padding:0.625rem 0.875rem;border-radius:8px;border:1px solid var(--border-color);font-size:0.78rem;">
-                <div style="width:16px;height:16px;background:#10B981;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="10" height="10" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                Conferir estoque de insumos críticos
-              </div>
-              <div style="display:flex;align-items:center;gap:0.75rem;background:white;padding:0.625rem 0.875rem;border-radius:8px;border:1px solid var(--border-color);font-size:0.78rem;">
-                <div style="width:16px;height:16px;border:2px solid var(--border-color);border-radius:4px;flex-shrink:0;"></div>
-                Ativar canais de delivery
-              </div>
-              <div style="display:flex;align-items:center;gap:0.75rem;background:white;padding:0.625rem 0.875rem;border-radius:8px;border:1px solid var(--border-color);font-size:0.78rem;">
-                <div style="width:16px;height:16px;border:2px solid var(--border-color);border-radius:4px;flex-shrink:0;"></div>
-                Escalar equipe para pico do almoço
-              </div>
-              <div style="display:flex;align-items:center;gap:0.75rem;background:white;padding:0.625rem 0.875rem;border-radius:8px;border:1px solid var(--border-color);font-size:0.78rem;">
-                <div style="width:16px;height:16px;border:2px solid var(--border-color);border-radius:4px;flex-shrink:0;"></div>
-                Registrar leitura de caixa inicial
-              </div>
-            </div>
-            <div style="margin-top:1rem;display:flex;align-items:center;gap:0.5rem;">
-              <div style="height:4px;flex:1;background:#ECFDF5;border-radius:2px;overflow:hidden;"><div style="height:100%;width:40%;background:#10B981;border-radius:2px;"></div></div>
-              <span style="font-size:0.65rem;color:var(--text-muted);">2 de 5 concluídos</span>
-            </div>
-          </div>
-        </div>
-        <div class="how-content">
-          <h2>Como funciona</h2>
-          <p>Do alerta gerado pela IA até a tarefa executada pelo gerente — tudo no mesmo fluxo, sem troca de ferramentas.</p>
-          <div class="how-acc-item">
-            <div class="how-acc-header"><span class="how-acc-title">Tarefas criadas automaticamente a partir de insights</span><svg class="how-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-            <div class="how-acc-body">Quando a IA identifica um problema — como CMV acima do alvo — ela pode criar automaticamente uma tarefa para o responsável da loja, com contexto e prazo.</div>
-          </div>
-          <div class="how-acc-item">
-            <div class="how-acc-header"><span class="how-acc-title">Checklists padronizados por turno e loja</span><svg class="how-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-            <div class="how-acc-body">Crie rotinas de abertura, fechamento e verificação que se repetem automaticamente. O gerente só executa — você acompanha em tempo real.</div>
-          </div>
-          <div class="how-acc-item">
-            <div class="how-acc-header"><span class="how-acc-title">Responsáveis e prazos claros</span><svg class="how-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-            <div class="how-acc-body">Cada tarefa tem um dono, um prazo e um status visível. Acabou o "eu achei que outro ia fazer".</div>
-          </div>
-          <div class="how-acc-item">
-            <div class="how-acc-header"><span class="how-acc-title">Acompanhamento em tempo real</span><svg class="how-acc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-            <div class="how-acc-body">Veja quais lojas estão com pendências em aberto, quais concluíram rotinas no prazo e onde há atrasos recorrentes.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BENEFÍCIOS -->
-  <section class="benefits-section">
-    <div class="container">
-      <div class="section-title"><h2>O que muda na prática</h2><p>Quando a execução tem clareza, a operação ganha consistência.</p></div>
-      <div class="benefits-grid">
-        <div class="benefit-card"><div class="benefit-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div><div class="benefit-title">Consistência em escala</div><div class="benefit-desc">A mesma rotina de abertura que funciona na Loja A é replicada automaticamente para todas as lojas da rede — sem retrabalho manual.</div></div>
-        <div class="benefit-card"><div class="benefit-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div class="benefit-title">Time alinhado</div><div class="benefit-desc">Cada colaborador sabe o que precisa fazer, quando e por quê. Menos reunião de alinhamento, mais execução.</div></div>
-        <div class="benefit-card"><div class="benefit-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div><div class="benefit-title">Rastreabilidade total</div><div class="benefit-desc">Todo histórico de execução é registrado. Você sabe quem fez, quando fez e o que ficou pendente — em qualquer loja.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROVA DE VALOR -->
-  <section class="value-proof">
-    <div class="container">
-      <div class="value-proof-inner">
-        <div class="value-stats">
-          <div class="value-stat"><strong>+35%</strong><span>Aumento na taxa de conclusão de rotinas operacionais</span></div>
-          <div class="value-stat"><strong>Zero</strong><span>Dependência de WhatsApp para alinhar tarefas</span></div>
-          <div class="value-stat"><strong>100%</strong><span>Das tarefas com responsável e prazo definidos</span></div>
-        </div>
-        <div class="value-text">
-          <h2>Saber não basta.<br>Executar é o que conta.</h2>
-          <p>O Visum fecha o ciclo: do insight da IA até a ação do gerente, com rastreabilidade e controle em tempo real.</p>
-          <a href="comecar.html" class="btn value-cta-btn">Começar agora →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq-section">
-    <div class="container">
-      <div class="section-title"><h2>Perguntas frequentes</h2></div>
-      <div class="faq-list">
-        <div class="faq-item"><div class="faq-question">As tarefas são criadas automaticamente ou preciso criar na mão? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="faq-answer">Os dois! Você pode criar manualmente ou configurar regras para que a IA crie automaticamente quando detectar um desvio específico.</div></div>
-        <div class="faq-item"><div class="faq-question">Consigo definir rotinas diferentes por loja? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="faq-answer">Sim. Você pode criar templates por tipo de loja, por turno ou por grupo de unidades — e depois personalizar individualmente se precisar.</div></div>
-        <div class="faq-item"><div class="faq-question">O app funciona no celular para os gerentes de loja? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="faq-answer">Sim. A interface é responsiva e funciona em qualquer dispositivo. O gerente acessa, marca como feito e você vê em tempo real no painel central.</div></div>
-        <div class="faq-item"><div class="faq-question">Posso ver o histórico de execução das rotinas? <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div><div class="faq-answer">Sim. Todo o histórico fica registrado, com data, horário, responsável e status de cada item — por loja e por período.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="feature-final-cta">
-    <div class="container">
-      <h2>Da análise à<br><span class="text-gradient">execução real</span></h2>
-      <p>Checklists, tarefas automáticas e acompanhamento centralizado. Tudo no Visum.</p>
-      <div class="feature-actions" style="justify-content:center;">
-        <a href="comecar.html" class="btn btn-primary">Testar grátis</a>
-        <a href="produto-chat.html" class="btn btn-outline">Conhecer o Chat Visum</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-logo-side">
-          <img src="assets/logo-visum.svg" alt="Visum" class="footer-visum-logo">
-          <h3><img src="assets/logo-trusted%202.svg" alt="Trusted"> Um produto Trusted</h3>
-          <div class="newsletter-widget">
-            <h4 style="font-size: 0.85rem; font-weight: 400; color: var(--text-muted); margin-bottom: 0.75rem;">assine nossa newsletter</h4>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); var msg = this.querySelector('.newsletter-message'); msg.textContent = 'Inscrição confirmada com sucesso!'; msg.classList.add('success'); this.reset();">
-              <div class="newsletter-input-group">
-                <input type="email" placeholder="Seu melhor e-mail" required>
-                <button type="submit" class="newsletter-btn" aria-label="Assinar">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
-                </button>
-              </div>
-              <div class="newsletter-message"></div>
-            </form>
-          </div>
-        </div>
-        <div class="footer-nav-col"><h4>Visum</h4><ul><li><a href="historia.html">Sobre</a></li><li><a href="planos.html">Planos</a></li><li><a href="cases.html">Cases</a></li></ul></div>
-        <div class="footer-nav-col"><h4>Produtos</h4><ul><li><a href="produto-chat.html">Chat Visum</a></li><li><a href="produto-tarefas.html">Tarefas</a></li><li><a href="produto-paineis.html">Painéis</a></li><li><a href="produto-integracoes.html">Integrações</a></li><li><a href="produto-gestao.html">Gestão</a></li></ul></div>
-        <div class="footer-nav-col"><h4>Comunidade</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="cases.html">Cases</a></li><li><a href="https://parceiros.visumhub.ai/">Parceiros</a></li></ul></div>
-      </div>
-      <div class="footer-display-name"><div class="floating-ai-container"><img src="assets/IconAI-intelligentproduct.png" alt="AI" class="floating-ai-icon"></div><h2 class="text-gradient">Copiloto Inteligente</h2></div>
-      <div class="footer-bottom"><div class="footer-bottom-info">Visum 2026</div><div class="footer-bottom-links"><a href="#">Privacidade</a><a href="#">Termos</a><a href="https://www.instagram.com/visumhubai" class="footer-social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a><a href="https://www.linkedin.com/company/visum-hub-ai/" class="footer-social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a></div></div>
-    </div>
-  </footer>
-  <script src="mega-menu.js"></script>
-    <script src="chat-widget.js"></script>
+<header>
+<div class="container nav-container">
+<a class="logo" href="index.html" id="site-logo">
+<img alt="Visum" src="assets/logo-visum.svg"/>
+</a>
+<nav class="nav-links">
+<div class="nav-has-dropdown">
+<button class="nav-dropdown-trigger">
+                        Produto
+                        <svg class="nav-dropdown-chevron" fill="none" height="12" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="12">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="nav-mega-panel">
+<div class="mega-left">
+<div class="mega-section-label">Produto</div>
+<a class="mega-item" href="produto-chat.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Chat Visum</div>
+<div class="mega-item-desc">Converse com seus dados operacionais</div>
+</div>
+</a>
+<a class="mega-item" href="produto-insightsealertas.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Insights e Alertas</div>
+<div class="mega-item-desc">Padrões ocultos detectados pela IA</div>
+</div>
+</a>
+<a class="mega-item" href="produto-tarefas.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M9 11l3 3L22 4"></path>
+<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Tarefas e Checklist</div>
+<div class="mega-item-desc">Transforme insights em ação real</div>
+</div>
+</a>
+<a class="mega-item" href="produto-paineis.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<rect height="7" width="7" x="3" y="3"></rect>
+<rect height="7" width="7" x="14" y="3"></rect>
+<rect height="7" width="7" x="14" y="14"></rect>
+<rect height="7" width="7" x="3" y="14"></rect>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Painéis de Análise</div>
+<div class="mega-item-desc">Visualize o que importa, em tempo real</div>
+</div>
+</a>
+<a class="mega-item" href="produto-integracoes.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Integrações</div>
+<div class="mega-item-desc">Conecte PDV, Delivery, Avaliações, Redes sociais, ERP (Enterprise)</div>
+</div>
+</a>
+<a class="mega-item" href="produto-gestao.html">
+<div class="mega-item-icon"><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg></div>
+<div class="mega-item-body">
+<div class="mega-item-title">Gestão e Governança</div>
+<div class="mega-item-desc">Controle multiloja com padronização</div>
+</div>
+</a>
+</div>
+<div class="mega-right">
+<div class="mega-right-label">Visum Hub</div>
+<div class="mega-right-title">O centro de controle da sua operação</div>
+<div class="mega-right-desc">Tudo que você precisa para decidir rápido e operar bem.</div>
+<a class="mega-right-btn" href="index.html">Ver produto →</a>
+</div>
+</div>
+</div>
+<a href="planos.html">Planos</a>
+<a href="cases.html">Cases</a>
+<a href="blog.html">Blog</a>
+</nav>
+<div class="nav-actions">
+<a href="https://www.visumhub.com.br/auth/login" style="font-weight: 500;">Login</a>
+<a class="btn btn-primary" href="comecar.html">Começar agora</a>
+</div>
+</div>
+</header>
+<!-- Mobile Navigation Drawer -->
+<nav aria-label="Menu de navegação mobile" class="nav-mobile-drawer">
+<div class="nav-mobile-section-label">Produto</div>
+<a class="nav-mobile-link" href="produto-chat.html">Chat Visum</a>
+<a class="nav-mobile-link" href="produto-tarefas.html">Tarefas e Checklist</a>
+<a class="nav-mobile-link" href="produto-paineis.html">Painéis de Análise</a>
+<a class="nav-mobile-link" href="produto-integracoes.html">Integrações</a>
+<a class="nav-mobile-link" href="produto-gestao.html">Gestão e Governança</a>
+<div class="nav-mobile-section-label">Visum</div>
+<a class="nav-mobile-link" href="planos.html">Planos</a>
+<a class="nav-mobile-link" href="cases.html">Cases</a>
+<a class="nav-mobile-link" href="blog.html">Blog</a>
+<div class="nav-mobile-actions">
+<a class="btn btn-outline" href="https://www.visumhub.com.br/auth/login">Login</a>
+<a class="btn btn-primary" href="comecar.html">Começar agora</a>
+</div>
+</nav>
+<!-- HERO -->
+<section class="feature-hero section-bg-white"><div class="container">
+<div class="feature-hero-content">
+<div class="feature-badge"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg> Tarefas e Checklist</div>
+<h1>Do insight<br/><span class="text-gradient">à execução</span></h1>
+<p class="feature-sub">Transforme cada alerta e recomendação em tarefas concretas, com responsável, prazo e acompanhamento em tempo real. Sem perder nada no caminho.</p>
+<div class="feature-actions">
+<a class="btn btn-primary" href="comecar.html">Começar grátis</a>
+<a class="btn btn-outline" href="cases.html">Ver resultados</a>
+</div>
+</div>
+<div class="feature-hero-visual">
+<img alt="Criação em um só fluxo" src="assets/tarefas-e-checklist/tarefas-e-checklist-criacao-em-um-so-fluxo.png" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);"/>
+</div>
+</div></section>
+<!-- COMO FUNCIONA -->
+<section class="how-section section-bg-gray">
+<div class="container">
+<div class="how-inner">
+<div class="how-visual">
+<img alt="Tarefas e Checklist" src="assets/tarefas-e-checklist/tarefas-e-checklist-tarefa.png" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);"/>
+</div>
+<div class="how-content">
+<h2 class="text-gradient">Como funciona</h2>
+<p>Do alerta gerado pela IA até a tarefa executada pelo gerente tudo no mesmo fluxo, sem troca de ferramentas.</p>
+<div class="how-acc-item">
+<div class="how-acc-header"><span class="how-acc-title">Tarefas criadas automaticamente a partir de insights</span><svg class="how-acc-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div>
+<div class="how-acc-body">Quando a IA identifica um problema como custos acima do alvo ela pode criar automaticamente uma tarefa para o responsável da loja, com contexto e prazo.</div>
+</div>
+<div class="how-acc-item">
+<div class="how-acc-header"><span class="how-acc-title">Checklists padronizados por turno e loja</span><svg class="how-acc-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div>
+<div class="how-acc-body">Crie rotinas de abertura, fechamento e verificação que se repetem automaticamente. O gerente só executa você acompanha em tempo real.</div>
+</div>
+<div class="how-acc-item">
+<div class="how-acc-header"><span class="how-acc-title">Responsáveis e prazos claros</span><svg class="how-acc-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div>
+<div class="how-acc-body">Cada tarefa tem um dono, um prazo e um status visível. Acabou o "eu achei que outro ia fazer".</div>
+</div>
+<div class="how-acc-item">
+<div class="how-acc-header"><span class="how-acc-title">Acompanhamento em tempo real</span><svg class="how-acc-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div>
+<div class="how-acc-body">Veja quais lojas estão com pendências em aberto, quais concluíram rotinas no prazo e onde há atrasos recorrentes.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BENEFÍCIOS -->
+<section class="benefits-section section-bg-white">
+<div class="container">
+<div class="section-title"><h2 class="text-gradient">O que muda na prática</h2><p>Quando a execução tem clareza, a operação ganha consistência.</p></div>
+<div class="benefits-grid">
+<div class="benefit-card"><div class="benefit-icon"><svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div><div class="benefit-title">Consistência em escala</div><div class="benefit-desc">A mesma rotina de abertura que funciona na Loja A é replicada automaticamente para todas as lojas da rede sem retrabalho manual.</div></div>
+<div class="benefit-card"><div class="benefit-icon"><svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div class="benefit-title">Time alinhado</div><div class="benefit-desc">Cada colaborador sabe o que precisa fazer, quando e por quê. Menos reunião de alinhamento, mais execução.</div></div>
+<div class="benefit-card"><div class="benefit-icon"><svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div><div class="benefit-title">Rastreabilidade total</div><div class="benefit-desc">Todo histórico de execução é registrado. Você sabe quem fez, quando fez e o que ficou pendente em qualquer loja.</div></div>
+</div>
+</div>
+</section>
+<!-- PROVA DE VALOR -->
+<section class="value-proof section-bg-gray">
+<div class="container">
+<div class="value-proof-inner">
+<div class="value-stats">
+<div class="value-stat"><strong>+35%</strong><span>Aumento na taxa de conclusão de rotinas operacionais</span></div>
+<div class="value-stat"><strong>Zero</strong><span>Dependência de WhatsApp para alinhar tarefas</span></div>
+<div class="value-stat"><strong>100%</strong><span>Das tarefas com responsável e prazo definidos</span></div>
+</div>
+<div class="value-text">
+<h2>Saber não basta.<br/>Executar é o que conta.</h2>
+<p>O Visum fecha o ciclo: do insight da IA até a ação do gerente, com rastreabilidade e controle em tempo real.</p>
+<a class="btn value-cta-btn" href="comecar.html">Começar agora →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="faq-section section-bg-white">
+<div class="container">
+<div class="section-title"><h2 class="text-gradient">Perguntas frequentes</h2></div>
+<div class="faq-list">
+<div class="faq-item"><div class="faq-question">As tarefas são criadas automaticamente ou preciso criar na mão? <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="faq-answer">Os dois! Você pode criar manualmente ou configurar regras para que a IA crie automaticamente quando detectar um desvio específico.</div></div>
+<div class="faq-item"><div class="faq-question">Consigo definir rotinas diferentes por loja? <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="faq-answer">Sim. Você pode criar templates por tipo de loja, por turno ou por grupo de unidades e depois personalizar individualmente se precisar.</div></div>
+<div class="faq-item"><div class="faq-question">O app funciona no celular para os gerentes de loja? <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="faq-answer">Sim. A interface é responsiva e funciona em qualquer dispositivo. O gerente acessa, marca como feito e você vê em tempo real no painel central.</div></div>
+<div class="faq-item"><div class="faq-question">Posso ver o histórico de execução das rotinas? <svg class="faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg></div><div class="faq-answer">Sim. Todo o histórico fica registrado, com data, horário, responsável e status de cada item por loja e por período.</div></div>
+</div>
+</div>
+</section>
+<!-- CTA FINAL -->
+<section class="feature-final-cta section-bg-gray">
+<div class="container">
+<h2>Da análise à<br/><span class="text-gradient">execução real</span></h2>
+<p>Checklists, tarefas automáticas e acompanhamento centralizado. Tudo no Visum.</p>
+<div class="feature-actions" style="justify-content:center;">
+<a class="btn btn-primary" href="comecar.html">Testar grátis</a>
+<a class="btn btn-outline" href="produto-chat.html">Conhecer o Chat Visum</a>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-logo-side">
+<img alt="Visum" class="footer-visum-logo" src="assets/logo-visum.svg"/>
+<h3><img alt="Trusted" src="assets/logo-trusted%202.svg"/> Um produto Trusted</h3>
+<div class="newsletter-widget">
+<h4 style="font-size: 0.85rem; font-weight: 400; color: var(--text-muted); margin-bottom: 0.75rem;">assine nossa newsletter</h4>
+<form class="newsletter-form" onsubmit="event.preventDefault(); var form = this; var msg = form.querySelector('.newsletter-message'); var email = form.querySelector('input[type=email]').value; fetch('https://formsubmit.co/ajax/contato@visumhub.ai', {method: 'POST', headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}, body: JSON.stringify({email: email, _subject: 'Nova Inscrição na Newsletter', _autoresponse: 'Olá! Você acabou de se inscrever na newsletter do Visum Hub. Muito em breve você passará a receber nossos melhores insights operacionais. Um abraço, Equipe Visum'})}).then(function(){ msg.textContent = 'Inscrição confirmada com sucesso!'; msg.classList.add('success'); form.reset(); }).catch(function(){ msg.textContent = 'Erro ao se inscrever.'; msg.style.color='red'; });">
+<div class="newsletter-input-group">
+<input placeholder="Seu melhor e-mail" required="" type="email"/>
+<button aria-label="Assinar" class="newsletter-btn" type="submit">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+</button>
+</div>
+<div class="newsletter-message"></div>
+</form>
+</div>
+</div>
+<div class="footer-nav-col"><h4>Visum</h4><ul><li><a href="historia.html">Sobre</a></li><li><a href="planos.html">Planos</a></li><li><a href="cases.html">Cases</a></li></ul></div>
+<div class="footer-nav-col"><h4>Produtos</h4><ul><li><a href="produto-chat.html">Chat Visum</a></li><li><a href="produto-tarefas.html">Tarefas</a></li><li><a href="produto-paineis.html">Painéis</a></li><li><a href="produto-integracoes.html">Integrações</a></li><li><a href="produto-gestao.html">Gestão</a></li></ul></div>
+<div class="footer-nav-col"><h4>Comunidade</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="cases.html">Cases</a></li><li><a href="https://parceiros.visumhub.ai/">Parceiros</a></li></ul></div>
+</div>
+<div class="footer-display-name"><div class="floating-ai-container"><img alt="AI" class="floating-ai-icon" src="assets/IconAI-intelligentproduct.png"/></div><h2 class="text-gradient">Copiloto Inteligente</h2></div>
+<div class="footer-bottom"><div class="footer-bottom-info">Visum 2026</div><div class="footer-bottom-links"><a href="https://www.visumhub.com.br/politica-de-privacidade">Privacidade</a><a href="https://www.visumhub.com.br/termos-de-uso">Termos</a><div class="footer-social-icons" style="display: flex; gap: 0.5rem; position: relative; z-index: 9999; pointer-events: auto;">
+<a class="footer-social-link" href="https://www.instagram.com/visumhubai" target="_blank" rel="noopener noreferrer">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+<line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+</svg>
+</a>
+<a class="footer-social-link" href="https://www.linkedin.com/company/visum-hub-ai/" target="_blank" rel="noopener noreferrer">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+<rect height="12" width="4" x="2" y="9"></rect>
+<circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a class="footer-social-link" href="https://x.com/visumhubai" target="_blank" rel="noopener noreferrer">
+<svg fill="currentColor" stroke="none" height="24" viewbox="0 0 24 24" width="24">
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+</svg>
+</a>
+</div></div></div>
+</div>
+</footer>
+<script src="mega-menu.js"></script>
+<script src="chat-widget.js?v=2"></script>
 </body>
 </html>
